@@ -15,6 +15,8 @@ Number of listings ---> Ratings
 
 ------
 Gaan we verschillende steden in een land vergelijken, of verschillende landen?
+
+
 Misschien kunnen we de bezettingsgraad aan het onderzoek toevoegen?
 
 
