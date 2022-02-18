@@ -1,12 +1,10 @@
-# AIRBNB, the new Student Hustle?
+# AIRBNB, the new student hustle?
 
 Research question: To what extent has the number of listings on Airbnb effect on the ratings in Paris? (personal, all cities in France)
 
 ## Motivation
-*Still in progress*
-*The inflation rate in the European Union increased from 1.2% in January to 5.3% in December of 2021.
 
-For us students, everything is getting more expensive while we are not able to earn more. Therefore, this project focuses on the opportunity  to earn some money by renting your student room.*
+For students, everything is getting more expensive while students are not able to earn more. Therefore, this project focuses on the opportunity  to earn some money by renting your own student room. Students have the problem that they often do not have the time to work many hours, but the price of many, including student rooms, is rising. The inflation rate in the European Union increased from 1.2% in January to 5.3% in December of 2021 (Eurostat, 2022). Is there a possibility to reduce the costs by renting out your (student) room on Airbnb?
 
 Airbnb has been taking the world by storm since 2008 with their disruptive innovation in the tourism branch (Guttentag, 2015). Most hosts use this platform to earn extra income on their biggest asset, their house. They start with renting out their private extention of the house and sometimes grow into multiple units (Priceonomics, 2017). Of all the Airbnb listings, approximately 20% belongs to hosts who rent out multiple properties (Shannon L, Alexandra H, 2017). We suspect that there is a different culture between hosts who have one listing vs hosts who have multiple listings. 
 
