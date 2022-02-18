@@ -1,4 +1,4 @@
-# Airbnb_project
+# AIRBNB, the new Student Hustle?
 
 Research question: To what extent has the number of listings on Airbnb effect on the ratings in Paris? (personal, all cities in France)
 
