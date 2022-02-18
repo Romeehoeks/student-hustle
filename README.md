@@ -14,7 +14,7 @@ The research method we will apply is regression analysis, we will use the method
 
 Conceptual model:
 
-Number of listings ---> Ratings
+![airbnb_model](https://user-images.githubusercontent.com/98962990/154692120-d84f802a-d1d1-4385-b258-cc6559c7b36d.png)
 
 ------
 Gaan we verschillende steden in een land vergelijken, of verschillende landen?
