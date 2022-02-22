@@ -1,4 +1,4 @@
-# AIRBNB, the new student hustle?
+# AirBnB, the new student hustle?
 
 Research question: In which European city is renting out your private room on Airbnb most attractive in terms of income, ratings and coverage?
 
