@@ -1,6 +1,6 @@
 # AIRBNB, the new student hustle?
 
-Research question: To what extent has the number of listings on Airbnb effect on the ratings in Paris? (personal, all cities in France)
+Research question: In which European city is renting out your private room on Airbnb most attractive in terms of income, ratings and coverage?
 
 ## Motivation
 
