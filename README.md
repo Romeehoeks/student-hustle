@@ -17,10 +17,7 @@ Conceptual model:
 ![airbnb_model](https://user-images.githubusercontent.com/98962990/154692120-d84f802a-d1d1-4385-b258-cc6559c7b36d.png)
 
 ------
-Gaan we verschillende steden in een land vergelijken, of verschillende landen?
 
-
-Misschien kunnen we de bezettingsgraad aan het onderzoek toevoegen?
 
 
 
