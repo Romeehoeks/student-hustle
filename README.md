@@ -9,7 +9,7 @@ Airbnb is one of the most popular online marketplaces for renting and leasing ac
 
 Furthermore, students have the opportunity to start their studies in a city or country of their choice. There are differences in terms of cost of livings between cities. It is interesting to investigate whether students can benefit more from renting out their room in one city than in another. Therefore, this research investigates different European cities to help and advise students. Hence, the following research question is defined:
 
-*In which European city is renting out a private room on Airbnb most attractive in terms of income, ratings, and coverage?*
+**In which European city is renting out a private room on Airbnb most attractive in terms of income, ratings, and coverage?**
 
 In this research, it is expected that renting out a student room is an opportunity to generate some extra income. However, as cities in Europe differ from each other for example in terms of cost of living, it is expected that there are also differences in terms of coverage, satisfaction and estimated income for private rooms between European cities. Therefore, it is important to examine these differences between European cities.
 
