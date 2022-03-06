@@ -1,28 +1,29 @@
-# Airbnb_project
+# AirBnB, the new student hustle?
 
-Research question: To what extent has the number of listings on Airbnb effect on the ratings in Paris? (personal, all cities in France)
+In which European city is renting out your private room on Airbnb most attractive in terms of income, ratings and coverage?
 
 ## Motivation
-*Still in progress*
-*The inflation rate in the European Union increased from 1.2% in January to 5.3% in December of 2021.
+Nowadays, everything is getting more and more expensive. This phenomenon can be explained by price inflation, which means that prices of goods and services go up in a given period. In the European Union, the inflation rate increased from 1.2% in January 2021 to 5.3% in December 2021 (Eurostat, 2022). Especially the prices of food, gas, and housing went up. Housing had to deal with the most significant rent increase in six years, which caused problems for many people, such as falling behind on their rent and increasing debts (CBS, 2020). Mainly students are struck because students cannot earn much money due to their study load. Most students only have a modest side job to finance their studies, life, and student accommodation. Therefore, the rising prices are a severe problem. It is allowed for students to sublet their student rooms if it does not violate the tenancy agreement (Rijksoverheid, 2022). Therefore, students can earn money to rent out their student room during periods their room is not occupied. 
 
-For us students, everything is getting more expensive while we are not able to earn more. Therefore, this project focuses on the opportunity  to earn some money by renting your student room.*
+Airbnb is one of the most popular online marketplaces for renting and leasing accommodation for the night. Most hosts use this platform to earn extra income on their most significant asset, their home. On the one hand, it is possible to rent out entire apartments, but on the other hand, it is also possible to rent out shared or private rooms. Airbnb has been taking the world by storm since 2008, with 4 million hosts and 1 billion guest arrivals worldwide ever since (Guttentag, 2015). Therefore, Airbnb might offer students the opportunity to earn money by subletting their private room to others. 
 
-Airbnb has been taking the world by storm since 2008 with their disruptive innovation in the tourism branch (Guttentag, 2015). Most hosts use this platform to earn extra income on their biggest asset, their house. They start with renting out their private extention of the house and sometimes grow into multiple units (Priceonomics, 2017). Of all the Airbnb listings, approximately 20% belongs to hosts who rent out multiple properties (Shannon L, Alexandra H, 2017). We suspect that there is a different culture between hosts who have one listing vs hosts who have multiple listings. 
+Furthermore, students have the opportunity to start their studies in a city or country of their choice. There are differences in terms of cost of livings between cities. It is interesting to investigate whether students can benefit more from renting out their room in one city than in another. Therefore, this research investigates different European cities to help and advise students. Hence, the following research question is defined:
 
-Furthermore we expect that hosts with a single listing treat this as their own and take good care of it. They take more effort in welcoming their guests and making them feel at home. On the other side, we expect that hosts with multiple listings would be seeing this as a job and would look at guests more commercially. In this research we are going to compare the ratings of hosts with single/  a few listings to ratings of hosts with many listings. And try to find a correlation between the amount of listings and the rating hosts get.
+**In which European city is renting out a private room on Airbnb most attractive in terms of income, ratings, and coverage?**
 
-The research method we will apply is regression analysis, we will use the method because our independent variable is a ratio and the dependent variable is an interval.
+In this research, it is expected that renting out a student room is an opportunity to generate some extra income. However, as cities in Europe differ from each other for example in terms of cost of living, it is expected that there are also differences in terms of coverage, satisfaction and estimated income for private rooms between European cities. Therefore, it is important to examine these differences between European cities.
+
 
 Conceptual model:
+Option 1
+![airbnb_model](https://user-images.githubusercontent.com/98962990/154692120-d84f802a-d1d1-4385-b258-cc6559c7b36d.png)
 
-Number of listings ---> Ratings
+Option 2
+![Diagram zonder titel](https://user-images.githubusercontent.com/26276634/155320821-7743ca05-09ba-48d1-8525-58f39f3ed775.jpg)
+
 
 ------
-Gaan we verschillende steden in een land vergelijken, of verschillende landen?
 
-
-Misschien kunnen we de bezettingsgraad aan het onderzoek toevoegen?
 
 
 
