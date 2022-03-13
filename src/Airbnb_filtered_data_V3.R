@@ -88,29 +88,27 @@ for(i in 1:length(cities)) {
               i, "city in Europe"))
 }
 
-#mean per city
-private_room1 <- mutate(private_room, city = "manchester") 
-summary(private_room1)
-
-#regressie
+#regression European City - Coverage
 reg = lm( availability_365 ~ city, data = private_room)
 summary(reg)
+
+#regression European City - Customer Satisfaction
 
 reg1 = lm( review_scores_rating ~ city, data = private_room)
 summary(reg1)
 
-reg2 = lm( review_scores_rating ~ city, data = private_room)
-summary(reg1)
-
-#new variable
-mutate(private_room, price * availability_365)
+#regression European City - Income (Price * coverage)
 private_room2 <- mutate(private_room, income = price * availability_365)
 View(private_room2)
 
 reg3 = lm( income ~ city, data = private_room2)
 summary(reg3)
 
-#define attractiveness
+
+
+
+
+#Rest (attractiveness)
 private_room3 <- mutate(private_room2, availability_365 * review_scores_rating * income)
 View(private_room3)
 
@@ -145,6 +143,6 @@ vienna <- factor[10]
 private_room2$city <- as.numeric(private_room2$city, levels=c(barcelona, berlin, copenhagen, dublin, edinburgh, london, manchester, munich, paris, vienna), labels=c("1", "2", "3", "4", "5", "6", "7", "8", "9", "10"))
 View(private_room2)
 
-#regression
+#regression but does not make sense?
 reg4 <- lm(city ~ review_scores_rating + availability_365 + income, data = private_room2)
 summary(reg4)
