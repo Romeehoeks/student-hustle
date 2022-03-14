@@ -1,0 +1,22 @@
+#download packages
+install.packages("googledrive")
+install.packages("readr")
+install.packages("tidyverse")
+install.packages("dplyr")
+install.packages("assertive")
+install.packages("stringr")
+
+# Load the packagaes to R
+library(googledrive)
+library(readr)
+library(tidyverse)
+library(dplyr)
+library(assertive)
+library(stringr)
+
+
+####Dataprep#####
+
+#Download the files through google drive
+data_id <-"1p-4gvEglcpfqD9qkLsU0oAsCDOBKgjZNHG4QfXOFaS0"
+drive_download(as_id(data_id), path = "airbnb_europe.csv", overwrite = TRUE)
