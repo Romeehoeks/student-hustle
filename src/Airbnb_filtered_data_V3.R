@@ -14,9 +14,14 @@ library(dplyr)
 library(assertive)
 library(stringr)
 
+
+####Dataprep#####
+
 #Download the files through google drive
 data_id <-"1p-4gvEglcpfqD9qkLsU0oAsCDOBKgjZNHG4QfXOFaS0"
 drive_download(as_id(data_id), path = "airbnb_europe.csv", overwrite = TRUE)
+
+"Clean.R"
 
 df <- read_csv("airbnb_europe.csv")
 View(df)
@@ -87,6 +92,8 @@ for(i in 1:length(cities)) {
   print(paste(cities[i], "is the number",
               i, "city in Europe"))
 }
+
+###Analysis###
 
 #regression European City - Coverage
 reg = lm( availability_365 ~ city, data = private_room)
