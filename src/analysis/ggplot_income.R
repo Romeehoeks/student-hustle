@@ -4,3 +4,6 @@ grafiek2 <- private_room2 %>%
 
 
 ggplot(grafiek2, aes(x = meanincome, y= city, color = city)) + geom_point()
+
+#save the plot to a pdf
+ggsave("myplot.meanincome.pdf")
