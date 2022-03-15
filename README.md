@@ -38,3 +38,4 @@ Option 2
 ## More resources
 
 ## About 
+This project is conducted by 5 ambitious Marketing Analytics students; Henk-Jan Klijsen, Marije  Kok, Max van der Meulen, Romée Hoeks and Thomas Hemrica for the course Data preparation. During this project the learned skills will put in practice to find out if it is attractive to rent out your own student room and if so, in which city is this the most attractive. 
