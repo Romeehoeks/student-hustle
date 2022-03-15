@@ -4,3 +4,6 @@ grafiek1 <- private_room2 %>%
 
 
 ggplot(grafiek1, aes(x = meanscore, y= city, color = city)) + geom_point()
+
+#save the plot to a pdf
+ggsave("myplot.reviews.pdf")
