@@ -113,6 +113,34 @@ reg3 = lm( income ~ city, data = private_room2)
 summary(reg3)
 
 
+#ggplot coverage
+grafiek <- private_room2 %>%
+  group_by(city)  %>%
+  summarize(mean365 = mean(availability_365))
+
+
+ggplot(grafiek, aes(x = mean365, y= city, color = city)) + geom_point() + expand_limits(x = 0)
+
+#ggplot customer satisfaction
+grafiek1 <- private_room2 %>%
+  group_by(city)  %>%
+  summarize(meanscore = mean(review_scores_rating))
+
+
+ggplot(grafiek1, aes(x = meanscore, y= city, color = city)) + geom_point()
+
+
+#ggplot income
+grafiek2 <- private_room2 %>%
+  group_by(city)  %>%
+  summarize(meanincome = mean(income))
+
+
+ggplot(grafiek2, aes(x = meanincome, y= city, color = city)) + geom_point()
+
+
+
+
 
 
 
