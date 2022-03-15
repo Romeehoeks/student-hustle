@@ -15,10 +15,7 @@ In this research, it is expected that renting out a student room is an opportuni
 
 
 Conceptual model:
-Option 1
-![airbnb_model](https://user-images.githubusercontent.com/98962990/154692120-d84f802a-d1d1-4385-b258-cc6559c7b36d.png)
 
-Option 2
 ![Diagram zonder titel](https://user-images.githubusercontent.com/26276634/155320821-7743ca05-09ba-48d1-8525-58f39f3ed775.jpg)
 
 
