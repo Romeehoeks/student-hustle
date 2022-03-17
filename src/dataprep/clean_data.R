@@ -17,8 +17,6 @@ max(student_data$number_of_reviews)
 min(student_data$number_of_reviews)
 mean(student_data$number_of_reviews)
 
-View(df)
-
 filtered_data <- student_data %>%
   filter(host_listings_count == 1, number_of_reviews >23, availability_365 >0)
 
