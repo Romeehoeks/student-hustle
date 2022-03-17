@@ -37,5 +37,5 @@ is.numeric(private_room$price)
 duplicated(private_room)
 sum(duplicated(private_room))
 
-write.csv(private_room, 'cleaned_data.csv')
+write.csv(private_room, 'private_room.csv')
 
