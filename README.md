@@ -29,20 +29,44 @@ Conceptual model:
 ## Method and results
 To find out the most attractive city to rent out your room, we did the following:
 - calculate average income and availability (this will be the independent variables)
-- define the dependent variable. This will be the reviews/ratings per room
+- define the dependent variable. These will be the reviews/ratings per room
 - examine the relationship between the IV and the DV
 - If the relationship is significant, we could calculate in which city it would be most attractive to rent out your room
 
-Why did we use linear regression, instead of for example a factor analysis? The p-values shows the different mean of each variable and its difference with the DV.
+Why did we use linear regression, instead of for example a factor analysis? The p-values show the different mean of each variable and its difference with the DV.
 
-#Results
+#### Results
 These graphs show our results. We can conclude that...
 
+This is an overview of our linear regression:
+
+And the R-squared shows... 
+
 ## Repository overview
+This project contains the following files and folders:
+
+- data > this folder contains all our raw data files which we found on the website: http://insideairbnb.com/ 
+- gen > this file shows the input and output of our code. This is also a place where we store our temporary data, which is not relevant to the final results. 
+- src > this is called the source file. It contains the different elements of our code. Here you could find the analysis that was made and the data preparations. Also, the final paper is in this folder.
+- README.md > this file are you currently reading
 
 ## Running instructions
+This project is built with different pipelines, which you could find in the file 'src'. You could replicate this project in a makefile and the order of that makefile is as follows: 
+
+1. src file for downloading packages
+2. src file for data preparation
+3. src file for analysis
+4. 
+
+
 
 ## More resources
+We found some more interesting resources about renting out your student room:
+
+- BRON
+- BRON
+- BRON
 
 ## About 
-This project is conducted by 5 ambitious Marketing Analytics students; Henk-Jan Klijsen, Marije  Kok, Max van der Meulen, Romée Hoeks and Thomas Hemrica for the course Data preparation. During this project the learned skills will put in practice to find out if it is attractive to rent out your own student room and if so, in which city is this the most attractive. 
+This project is conducted by 5 ambitious Marketing Analytics students; Henk-Jan Klijsen, Marije  Kok, Max van der Meulen, Romée Hoeks and Thomas Hemrica for the course Data preparation. During this project, the learned skills will be put in practice to find out if it is attractive to rent out your own student room and if so, in which city is this the most attractive. 
+
