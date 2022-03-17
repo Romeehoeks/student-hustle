@@ -1,11 +1,14 @@
 #step 2
-#Download the files through google drive
 library(googledrive)
+library(readr)
+
+#Download the files through google drive
+
 data_id <-"1p-4gvEglcpfqD9qkLsU0oAsCDOBKgjZNHG4QfXOFaS0"
 drive_download(as_id(data_id), path = "airbnb_europe.csv", overwrite = TRUE)
 
 #read the airbnb file
-library(readr)
+
 df <- read_csv("airbnb_europe.csv")
 View(df)
 
@@ -21,6 +24,7 @@ datasets <- lapply(urls, function(url) {
 })
 
 #Combine the data into 1 dataset
+
 combined_data = do.call('rbind', datasets) 
 downloaded_data <- write_csv(combined_data, 'combined_city_data.csv')
 View(downloaded_data)
