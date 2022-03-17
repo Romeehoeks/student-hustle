@@ -36,12 +36,12 @@ datasets <- lapply(urls, function(url) {
   return(res)
 })
 
-##Clean data##
-
 #Combine the data into 1 dataset
 combined_data = do.call('rbind', datasets) 
 downloaded_data <- write_csv(combined_data, 'combined_city_data.csv')
 View(downloaded_data)
+
+##Clean data##
 
 #Select the data we need to use for our research
 student_data <- downloaded_data %>%
