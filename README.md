@@ -27,6 +27,16 @@ Conceptual model:
 
 
 ## Method and results
+To find out the most attractive city to rent out your room, we did the following:
+- calculate average income and availability (this will be the independent variables)
+- define the dependent variable. This will be the reviews/ratings per room
+- examine the relationship between the IV and the DV
+- If the relationship is significant, we could calculate in which city it would be most attractive to rent out your room
+
+Why did we use linear regression, instead of for example a factor analysis? The p-values shows the different mean of each variable and its difference with the DV.
+
+#Results
+These graphs show our results. We can conclude that...
 
 ## Repository overview
 
