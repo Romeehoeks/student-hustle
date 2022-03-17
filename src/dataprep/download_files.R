@@ -25,4 +25,7 @@ combined_data = do.call('rbind', datasets)
 downloaded_data <- write_csv(combined_data, 'combined_city_data.csv')
 View(downloaded_data)
 
-###### HIER HOEVEN GEEN PDF VAN TE DOWLOADEN DENK IK???? #####
+#Export to csv
+
+write.csv(downloaded_data, 'downloaded_data')
+
