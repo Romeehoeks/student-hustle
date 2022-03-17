@@ -37,5 +37,29 @@ is.numeric(private_room$price)
 duplicated(private_room)
 sum(duplicated(private_room))
 
+#Deleting NA values in Price
+private_room <- private_room[!is.na(private_room$price), ]
+
+#Calculate the mean prices per city
+mean_price_cities <- aggregate(private_room$price, list(private_room$city), FUN=mean)
+names(mean_price_cities)[1]<- "city"
+names(mean_price_cities)[2]<- "mean_price"
+
+#Change the currency from DKK to euro
+library(dplyr)
+mean_price_cities_euro <- mean_price_cities %>%
+  mutate(mean_price = case_when(city == 'copenhagen' ~ mean_price * 0.10,
+                                TRUE ~ as.numeric(mean_price)))
+
+#Change pound to dollar
+mean_price_cities_euro1 <- mean_price_cities_euro %>%
+  mutate(mean_price = case_when(city == 'london' ~ mean_price / 1.19,
+    TRUE ~ as.numeric(mean_price))) %>%
+      mutate(mean_price = case_when(city == 'manchester' ~ mean_price / 1.19,
+        TRUE ~ as.numeric(mean_price))) %>%
+          mutate(mean_price = case_when(city == 'edinburgh' ~ mean_price / 1.19,
+            TRUE ~ as.numeric(mean_price)))
+
 write.csv(private_room, 'private_room.csv')
+write.csv(mean_price_cities_euro1, 'mean_price_cities_euro1.csv')
 
