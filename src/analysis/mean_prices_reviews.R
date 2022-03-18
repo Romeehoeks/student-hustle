@@ -35,3 +35,15 @@ combined_mean_data <- cbind(mean_price_cities_euro1, mean_reviews)
 combined_mean_data1 <- subset(test, select = -city)
 #change the column order
 combined_mean_data1 <- combined_data[, c(2,1,3)]
+
+#Plot the mean reviews per city with the mean price per city
+ggplot(combined_data1, aes(x= mean_reviews1, y=mean_price, color=city))+
+  geom_point()
+
+#regression with multiple variables
+regression <- lm(review_scores_rating ~ price + availability_365 + short_stay +city, data=private_room)
+summary(regression)
+
+#plot of our regression model
+plot <- plot(allEffects(regression))
+ggsave("regression_plot.pdf")
