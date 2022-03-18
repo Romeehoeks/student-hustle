@@ -29,3 +29,9 @@ summary(reg1)
 #check if reviews and availability have a relationship
 reg2 <- lm(review_scores_rating ~ availability_365, data = private_room)
 summary(reg2)
+
+#combine the mean_price and mean_reviews in one dataframe
+combined_mean_data <- cbind(mean_price_cities_euro1, mean_reviews)
+combined_mean_data1 <- subset(test, select = -city)
+#change the column order
+combined_mean_data1 <- combined_data[, c(2,1,3)]
