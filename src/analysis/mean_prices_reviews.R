@@ -12,3 +12,10 @@ names(mean_reviews)[2]<- "mean_reviews1"
 #plot the mean reviews per city. As you can see the highest score is in edinburgh, the lowest is in barcelona
 ggplot(mean_reviews, aes(x= city, y=mean_reviews1, color = mean_reviews1)) +geom_point()
 ggsave("mean_reviews.pdf")
+
+#Check if price and reviews have a relationship
+reg1 <- lm(review_scores_rating ~ price, data = private_room)
+summary(reg1)
+
+#export data
+write.csv(mean_reviews, 'mean_reviews.csv')
