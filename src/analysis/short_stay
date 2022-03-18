@@ -1,0 +1,7 @@
+#create dummies
+short_stay <- ifelse(private_room$maximum_nights <= 2, 1, 0)
+private_room <- data.frame(private_room,
+                            short_stay)
+
+reg1 <- lm(review_scores_rating ~ short_stay, data = private_room)
+summary(reg1)
