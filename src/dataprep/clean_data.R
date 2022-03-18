@@ -9,7 +9,7 @@ downloaded data <- read.csv("downloaded_data.csv")
 #Select the data we need to use for our research
 
 student_data <- downloaded_data %>%
-  select("name", "host_listings_count", "neighbourhood_group_cleansed", "city", "property_type", "price", "availability_365", "number_of_reviews", "review_scores_rating")
+  select("name", "host_listings_count", "neighbourhood_group_cleansed", "city", "property_type", "price", "availability_365", "maximum_nights", "number_of_reviews", "review_scores_rating")
 
 #calculate the average number of reviews, filter above the average of number of reviews, filter availability above 0 and filter the number of hostings on 0
 
@@ -48,6 +48,11 @@ sum(duplicated(private_room))
 #Deleting NA values in Price
 
 private_room <- private_room[!is.na(private_room$price), ]
+
+#create a dummy for short stay 
+short_stay <- ifelse(private_room$maximum_nights <= 2, 1, 0)
+private_room <- data.frame(private_room,
+                           short_stay)
 
 #Calculate the mean prices per city
 
