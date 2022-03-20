@@ -10,7 +10,6 @@ drive_download(as_id(data_id), path = "airbnb_europe.csv", overwrite = TRUE)
 #read the airbnb file
 
 df <- read_csv("airbnb_europe.csv")
-View(df)
 
 urls <- as.character(df$link)
 
