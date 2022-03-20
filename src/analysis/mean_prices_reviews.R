@@ -15,12 +15,10 @@ names(mean_reviews)[2]<- "mean_reviews1"
 ggplot(mean_reviews, aes(x= city, y=mean_reviews1, color = city)) +geom_point()
 ggsave("mean_reviews.pdf")
 
-#combine the mean_price and mean_reviews in one dataframe
+#combine the mean_price, mean_reviews, mean_availability in one dataframe
 
-combined_mean_data <- cbind(mean_price_cities_euro1, mean_reviews)
-combined_mean_data1 <- subset(combined_mean_data, select = -city)
-#change the column order
-combined_mean_data1 <- combined_mean_data1[, c(2,1,3)]
+combined_mean_data <- cbind(mean_price_cities_euro1, mean_reviews, mean_availability)
+combined_mean_data1 <-combined_mean_data[-c(3, 5)]
 
 #Plot the mean reviews per city with the mean price per city
 
