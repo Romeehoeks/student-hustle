@@ -14,14 +14,8 @@ Furthermore, students have the opportunity to start their studies in a city or c
 In this research, it is expected that renting out a student room is an opportunity to generate some extra income. However, as cities in Europe differ from each other for example in terms of cost of living, it is expected that there are also differences in terms of coverage, satisfaction and estimated income for private rooms between European cities. Therefore, it is important to examine these differences between European cities.
 
 
-Conceptual model:
-
-![Diagram zonder titel](https://user-images.githubusercontent.com/26276634/155320821-7743ca05-09ba-48d1-8525-58f39f3ed775.jpg)
-
 
 ------
-
-
 
 
 
