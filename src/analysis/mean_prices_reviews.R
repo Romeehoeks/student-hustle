@@ -18,13 +18,13 @@ ggsave("mean_reviews.pdf")
 #combine the mean_price and mean_reviews in one dataframe
 
 combined_mean_data <- cbind(mean_price_cities_euro1, mean_reviews)
-combined_mean_data1 <- subset(test, select = -city)
+combined_mean_data1 <- subset(combined_mean_data, select = -city)
 #change the column order
-combined_mean_data1 <- test1[, c(2,1,3)]
+combined_mean_data1 <- combined_mean_data1[, c(2,1,3)]
 
 #Plot the mean reviews per city with the mean price per city
 
-ggplot(test2, aes(x= mean_reviews1, y=mean_price, color=city))+
+ggplot(combined_mean_data1, aes(x= mean_reviews1, y=mean_price, color=city))+
   geom_point()
 
 #Check if price and reviews have a relationship
