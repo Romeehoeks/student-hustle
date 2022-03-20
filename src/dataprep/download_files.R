@@ -30,5 +30,5 @@ downloaded_data <- write_csv(combined_data, 'combined_city_data.csv')
 
 #Export to csv
 
-write.csv(downloaded_data, 'downloaded_data')
+write.csv(downloaded_data, 'downloaded_data.csv')
 
