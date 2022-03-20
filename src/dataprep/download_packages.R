@@ -7,3 +7,5 @@ install.packages("dplyr")
 install.packages("assertive")
 install.packages("stringr")
 install.packages("ggplot2")
+install.packages("‘AggregateR")
+
