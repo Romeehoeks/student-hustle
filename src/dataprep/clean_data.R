@@ -60,6 +60,11 @@ mean_price_cities <- aggregate(private_room$price, list(private_room$city), FUN=
 names(mean_price_cities)[1]<- "city"
 names(mean_price_cities)[2]<- "mean_price"
 
+#calculate the mean availability per city
+mean_availability <- aggregate(private_room$availability_365, list(private_room$city), FUN=mean)
+names(mean_availability) [1]<- "city"
+names(mean_availability) [2]<- "mean_availability"
+
 #Change the currency from DKK to euro
 
 mean_price_cities_euro <- mean_price_cities %>%
