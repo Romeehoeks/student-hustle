@@ -4,7 +4,7 @@ library(assertive)
 library(dplyr)
 
 #Read csv
-downloaded data <- read.csv("downloaded_data.csv")
+downloaded_data <- read.csv("downloaded_data.csv")
 
 #Select the data we need to use for our research
 
