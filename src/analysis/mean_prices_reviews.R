@@ -58,3 +58,7 @@ summary(regression)
 
 plot <- plot(allEffects(regression))
 ggsave("regression_plot.pdf")
+
+#Calculate the top10 cities based on the regression
+top10<-summary(regression)$coefficients[1,1]+summary(regression)$coefficients[2,1]*combined_mean_data1$mean_price[2:10]+summary(regression)$coefficients[3,1]*combined_mean_data1$mean_availability[2:10]+summary(regression)$coefficients[4,1]+summary(regression)$coefficients[5:13,1]
+top10 <-as.data.frame(top10)
