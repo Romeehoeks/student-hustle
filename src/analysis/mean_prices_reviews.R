@@ -19,11 +19,7 @@ ggsave("mean_reviews.pdf")
 
 combined_mean_data <- cbind(mean_price_cities_euro1, mean_reviews, mean_availability)
 combined_mean_data1 <-combined_mean_data[-c(3, 5)]
-
-#Plot the mean reviews per city with the mean price per city
-
-ggplot(combined_mean_data1, aes(x= mean_reviews1, y=mean_price, color=city))+
-  geom_point()
+write.csv(combined_mean_data1, 'combined_mean_data1')
 
 #Check if price and reviews have a relationship
 
@@ -34,15 +30,6 @@ summary(reg1)
 
 reg2 <- lm(review_scores_rating ~ availability_365, data = private_room)
 summary(reg2)
-
-#change the column order
-
-combined_mean_data1 <- combined_data[, c(2,1,3)]
-
-#Plot the mean reviews per city with the mean price per city
-
-ggplot(combined_data1, aes(x= mean_reviews1, y=mean_price, color=city))+
-  geom_point()
 
 #regression with multiple variables
 
