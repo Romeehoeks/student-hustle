@@ -2,6 +2,7 @@
 library(tidyverse)
 library(assertive)
 library(dplyr)
+library(readr)
 
 #Read csv
 downloaded_data <- read.csv("downloaded_data.csv")
