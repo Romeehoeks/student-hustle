@@ -30,7 +30,7 @@ To find out the most attractive city to rent out your room, we did the following
 Why did we use linear regression, instead of for example a factor analysis? The p-values show the different mean of each variable and its difference with the DV.
 
 #### Results
-These graphs show our results. We can conclude that...
+These graphs show our results. We can conclude that....
 
 This is an overview of our linear regression:
 
