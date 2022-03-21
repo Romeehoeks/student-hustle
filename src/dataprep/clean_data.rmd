@@ -109,7 +109,8 @@ table(private_room$property_type)
 ```
 
 ### Price
-The next variable is price, we would like to know what the mean prices are in each city to compare and know what a student can ask for their student room. First, there is investigated what the class of price is. The class was a character because of the dollar sign. Then we removed the dollar sign and the class changed to numeric. The next step was to check if there are any observations without a price. There were only 9 NA values, therefore we chose to delete them. After that, we calculated the mean prices per city, however we encountered that the amount for Copenhagen was extremely high compared to the other cities. We assumed that this was because of the difference currency. Therefore, we changed all not europe currencies to euro currencies. At the moment of writing, 1 Danish Krone is 0.10 euros and 1 pound is 1.19 euros. Therefore we multiplied the mean price of Copenhagen by 0.10 and divided Edinburgh, London and Manchester by 1.19 . 
+The next variable is price, we would like to know what the mean prices are in each city to compare and know what a student can ask for their student room. First, there is investigated what the class of price is. The class was a character because of the dollar sign. Then we removed the dollar sign and the class changed to numeric. The next step was to check if there are any observations without a price. There were only 9 NA values, therefore we chose to delete them. After that, we calculated the mean prices per city, which can be found below.
+
 ```{r echo=FALSE, message=FALSE, warning=FALSE, results='hide'}
 private_room$price = as.numeric(gsub("\\$", "", private_room$price))
 private_room <- private_room[!is.na(private_room$price), ]
@@ -120,11 +121,11 @@ mean_price_cities <- aggregate(private_room$price, list(private_room$city), FUN=
 names(mean_price_cities)[1]<- "city"
 names(mean_price_cities)[2]<- "mean_price"
 ```
-```{r}
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
 knitr::kable(mean_price_cities, format="markdown")
 ```
 
-After that, we calculated the mean prices per city, however we encountered that the amount for Copenhagen was extremely high compared to the other cities. We assumed that this was because of the difference currency. Therefore, we changed all not europe currencies to euro currencies. At the moment of writing, 1 Danish Krone is 0.10 euros and 1 pound is 1.19 euros. Therefore we multiplied the mean price of Copenhagen by 0.10 and divided Edinburgh, London and Manchester by 1.19 . 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, results='hide'}
 #Change the currency from DKK to euro
 
@@ -143,19 +144,30 @@ mean_price_cities_euro1 <- mean_price_cities_euro %>%
             TRUE ~ as.numeric(mean_price)))
 ```
 
+We encountered that the amount for Copenhagen was extremely high compared to the other cities. We assumed that this was because of the difference currency. Therefore, we changed all not europe currencies to euro currencies. At the moment of writing, 1 Danish Krone is 0.10 euros and 1 pound is 1.19 euros. Therefore we multiplied the mean price of Copenhagen by 0.10 and divided Edinburgh, London and Manchester by 1.19. The final mean prices per city are shown in the table below. 
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
+knitr::kable(mean_price_cities_euro1, format="markdown")
+```
+
 ### Availability 365
-The availability is how many day a hosting is available to rent on Airbnb. We filtered on available above 0 as we only want to see listings that were available. As a student, you are only available in the weekends which is approximately 2 nights per week. Which is 104 days a year. We would like to investigate if this would cause any problems when renting out your student room. Also, we would like to know what the mean available days are. 
+The availability is how many day a hosting is available to rent on Airbnb. We filtered on available above 0 as we only want to see listings that were available. As a student, you are only available in the weekends which is approximately 2 nights per week. Which is 104 days a year. We would like to investigate if this would cause any problems when renting out your student room. Also, we wanted  to know what the mean available days are on Airbnb, which can be found in the table below.
+
 ```{r echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
 #calculate the mean availability per city
 mean_availability <- aggregate(private_room$availability_365, list(private_room$city), FUN=mean)
 names(mean_availability) [1]<- "city"
 names(mean_availability) [2]<- "mean_availability"
 ```
+```{r echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
+knitr::kable(mean_availability, format="markdown")
+```
 
 ### Maximum nights
 To further elaborate on the previous variable. The maximum nights are 2 nights. Therefore, we included this variable as a dummy. 
 Short stay (maximum of 2 nights) = 0
 Long stay = 1
+
 ```{r echo=FALSE, message=FALSE, warning=FALSE, results='hide'}
 #create a dummy for short stay 
 short_stay <- ifelse(private_room$maximum_nights <= 2, 1, 0)
@@ -165,6 +177,7 @@ private_room <- data.frame(private_room,
 
 ### Number of reviews
 We want to check the number of reviews, because if someone only has 1 review which is a 5, this cannot be seen as reliable. Therefore, we checked the maximum, minimum and mean number of reviews. Based on that, we filter above the mean number of reviews. 
+
 ```{r echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
 max(student_data$number_of_reviews)
 min(student_data$number_of_reviews)
