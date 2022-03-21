@@ -13,3 +13,4 @@ cities <- c("London", "Munich", "Berlin", "Paris", "Zurich", "Vienna", "Edinburg
 for(i in 1:length(cities)) {
   print(paste(cities[i], "is the number",
               i, "city in Europe"))
+}
