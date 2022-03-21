@@ -12,7 +12,7 @@ downloaded_data <- read.csv("downloaded_data.csv")
 student_data <- downloaded_data %>%
   select("name", "host_listings_count", "neighbourhood_group_cleansed", "city", "property_type", "price", "availability_365", "maximum_nights", "number_of_reviews", "review_scores_rating")
 
-#calculate the average number of reviews, filter above the average of number of reviews, filter availability above 0 and filter the number of hostings on 0
+#calculate the average number of reviews, filter above the average of number of reviews, filter availability above 0 and filter the number of listings is 1.
 
 max(student_data$number_of_reviews)
 min(student_data$number_of_reviews)
