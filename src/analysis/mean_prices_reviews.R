@@ -1,8 +1,11 @@
 library(effects)
 library(carData)
+library(ggplot2)
+library(dplyr)
+library(broom)
+library(ggpubr)
 
-
-##Step 5
+##Step 4
 
 #plot the mean prices. As you can see the price in dublin is the highest, and in manchester the lowest.
 
@@ -44,8 +47,9 @@ summary(regression)
 
 #plot of our regression model
 
-plot <- plot(allEffects(regression))
-ggsave("regression_plot.pdf")
+pdf("multiple_regression_effects.pdf") 
+plot <- plot(allEffects(regression), ylim={c(4.5, 5)})
+dev.off()
 
 #Calculate the top10 cities based on the regression
 
@@ -61,3 +65,17 @@ top10[nrow(top10) + 1,] = citybarcelona
 
 rownames(top10) <- c("berlin", "copenhagen", "dublin", "edinburgh", "london", "manchester", "munich", "paris", "vienna", "barcelona")
 
+##Step 5
+#Create a table for the top 10 student cities in Europe ascending
+
+Top10_student_cities <- matrix(c("Edinburgh", "Manchester", "Munich", "London", "Berlin", "Dublin", "Vienna", "Paris","Barcelona", "Copenhagen"), ncol=1, byrow=TRUE)
+colnames(Top10_student_cities) <- c("City")
+rownames(Top10_student_cities) <- c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+Top10_student_cities <- as.table(Top10_student_cities)
+
+#Create a loop for the position of the student cities
+
+for(i in 1:length(Top10_student_cities)) {
+  print(paste(Top10_student_cities[i], "is the number",
+              i, "student city in Europe to rent out your student room"))
+}
