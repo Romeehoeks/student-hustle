@@ -1,3 +1,4 @@
+##Step 4
 #Create a table for the top 10 student cities in Europe ascending
 
 Top10_student_cities <- matrix(c("London", "Munich", "Berlin", "Paris", "Zurich", "Vienna", "Edinburgh", "Barcelona","Dublin", "Manchester"), ncol=1, byrow=TRUE)
