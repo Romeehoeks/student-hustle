@@ -35,11 +35,6 @@ summary(reg1)
 reg2 <- lm(review_scores_rating ~ availability_365, data = private_room)
 summary(reg2)
 
-#combine the mean_price and mean_reviews in one dataframe
-
-combined_mean_data <- cbind(mean_price_cities_euro1, mean_reviews)
-combined_mean_data1 <- subset(test, select = -city)
-
 #change the column order
 
 combined_mean_data1 <- combined_data[, c(2,1,3)]
@@ -60,5 +55,16 @@ plot <- plot(allEffects(regression))
 ggsave("regression_plot.pdf")
 
 #Calculate the top10 cities based on the regression
-top10<-summary(regression)$coefficients[1,1]+summary(regression)$coefficients[2,1]*combined_mean_data1$mean_price[2:10]+summary(regression)$coefficients[3,1]*combined_mean_data1$mean_availability[2:10]+summary(regression)$coefficients[4,1]+summary(regression)$coefficients[5:13,1]
+
+top10<-summary(regression)$coefficients[1,1]+summary(regression)$coefficients[2,1]*combined_mean_data1$mean_price[2:10]+summary(regression)$coefficients[3,1]*combined_mean_data1$mean_availability[2:10]+summary(regression)$coefficients[4,1]+summary(regression)$coefficients[5:13,1] 
 top10 <-as.data.frame(top10)
+
+#As Barcelona is the 'base coefficient' we need to add this one seperately
+
+citybarcelona <- summary(regression)$coefficients[1,1]+summary(regression)$coefficients[2,1]*combined_mean_data1$mean_price[1]+summary(regression)$coefficients[3,1]*combined_mean_data1$mean_availability[1]+summary(regression)$coefficients[4,1] 
+top10[nrow(top10) + 1,] = citybarcelona
+
+#changing the row names
+
+rownames(top10) <- c("berlin", "copenhagen", "dublin", "edinburgh", "london", "manchester", "munich", "paris", "vienna", "barcelona")
+
