@@ -1,3 +1,5 @@
+##Step 5
+
 #plot the mean prices. As you can see the price in dublin is the highest, and in manchester the lowest.
 
 ggplot(mean_price_cities_euro1, aes(x= city, y=mean_price, color = city)) +
