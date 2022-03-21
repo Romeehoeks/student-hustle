@@ -39,6 +39,8 @@ regression <- lm(review_scores_rating ~ price + availability_365 + short_stay +c
 summary(regression)
 
 #plot of our regression model
+install.packages("effects")
+library(effects)
 
 plot <- plot(allEffects(regression))
 ggsave("regression_plot.pdf")
