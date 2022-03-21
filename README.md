@@ -11,7 +11,7 @@ Furthermore, students have the opportunity to start their studies in a city or c
 
 **In which European city is renting out a private room on Airbnb most attractive in terms of income, ratings, and coverage?**
 
-In this research, it is expected that renting out a student room is an opportunity to generate some extra income. However, as cities in Europe differ from each other for example in terms of cost of living, it is expected that there are also differences in terms of coverage, satisfaction and estimated income for private rooms between European cities. Therefore, it is important to examine these differences between European cities.
+In this research, it is expected that renting out a student room is an opportunity to generate some extra income. However, as cities in Europe differ from each other for example in terms of cost of living, it is expected that there are also differences in terms of coverage, satisfaction and estimated income for private rooms between European cities. Therefore, it is important to examine these differences between European cities. This research examines the differences between the top 10 student cities in Europe; London, Munich, Berlin, Paris, Zurich, Vienna, Edinburgh, Barcelona, Dublin and Manchester. 
 
 
 
