@@ -25,7 +25,7 @@ datasets <- lapply(urls, function(url) {
 #Combine the data into 1 dataset
 
 combined_data = do.call('rbind', datasets) 
-downloaded_data <- combined.data
+downloaded_data <- combined_data
 
 
 #Export to csv
