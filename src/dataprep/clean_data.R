@@ -7,33 +7,6 @@ library(readr)
 
 #Real file
 private_room <- read.csv(file = '../../gen/dataprep/output/private_room.csv')
-#Check if the variables are numeric
-
-is.numeric(private_room$host_listings_count)
-is.numeric(private_room$price)
-is.numeric(private_room$availability_365)
-is.numeric(private_room$number_of_reviews)
-is.numeric(private_room$review_scores_rating)
-class(private_room$price)  
-
-#Remove dollar sign from prive to convert as nummeric
-
-private_room$price = as.numeric(gsub("\\$", "", private_room$price))
-is.numeric(private_room$price)
-
-#Finding duplicates
-
-duplicated(private_room)
-sum(duplicated(private_room))
-
-#Deleting NA values in Price
-
-private_room <- private_room[!is.na(private_room$price), ]
-
-#create a dummy for short stay 
-short_stay <- ifelse(private_room$maximum_nights <= 2, 1, 0)
-private_room <- data.frame(private_room,
-                           short_stay)
 
 #Calculate the mean prices per city
 
