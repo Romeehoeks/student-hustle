@@ -27,6 +27,14 @@ table(filtered_data$property_type)
 private_room <- filtered_data %>% filter(grepl('Private room in bungalow|Private room in cabin|Private room in casa particular|Private room in castle|Private room in chalet Private room|Private room in condominium (condo)|Private room in cottage|Private room in floor|Private room in guest suite|Private room in guesthouse|Private room in hostel|Private room in houseboat|Private room in loft|Private room in rental unit|Private room in residential home|Private room in serviced apartment|Private room in tiny house|Private room in townhouse|Private room in treehouse|Private room in villa', property_type))
 
 
+
+dir.create('../../gen')
+dir.create('../../gen/data-preparation')
+dir.create('../../gen/data-preparation/input')
+write.csv(private_room, "../../gen/data-preparation/output/private_room.csv", row.names = FALSE)
+
+
+
 write.csv(private_room, 'private_room.csv')
 
 
