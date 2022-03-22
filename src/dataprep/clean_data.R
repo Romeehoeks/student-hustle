@@ -81,8 +81,8 @@ dir.create('../../gen/dataprep/input')
 dir.create('../../gen/dataprep/output')
 
 
-write.csv(combined_mean_data1, "../../gen/dataprep/output/combined_mean_data1.csv", row.names = FALSE)
-write.csv(mean_price_cities_euro1, "../../gen/dataprep/output/mean_price_cities_euro1.csv", row.names = FALSE)
+write.csv(combined_mean_data1, "../../gen/dataprep/input/combined_mean_data1.csv", row.names = FALSE)
+write.csv(mean_price_cities_euro1, "../../gen/dataprep/input/mean_price_cities_euro1.csv", row.names = FALSE)
 
 write.csv(combined_mean_data1, 'combined_mean_data1.csv')
 write.csv(mean_price_cities_euro1, "mean_price_cities_euro1.csv")
