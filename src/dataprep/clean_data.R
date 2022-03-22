@@ -47,6 +47,11 @@ mean_availability <- aggregate(private_room$availability_365, list(private_room$
 names(mean_availability) [1]<- "city"
 names(mean_availability) [2]<- "mean_availability"
 
+#Calculate the mean reviews per city
+mean_reviews <- aggregate(private_room$review_scores_rating, list(private_room$city), FUN=mean)
+names(mean_reviews)[1]<- "city"
+names(mean_reviews)[2]<- "mean_reviews1"
+
 #Change the currency from DKK to euro
 
 mean_price_cities_euro <- mean_price_cities %>%
@@ -63,7 +68,15 @@ mean_price_cities_euro1 <- mean_price_cities_euro %>%
           mutate(mean_price = case_when(city == 'edinburgh' ~ mean_price / 1.19,
             TRUE ~ as.numeric(mean_price)))
 
-write.csv(mean_price_cities_euro1, "../../gen/dataprep/output/mean_price_cities_euro1.csv", row.names = FALSE)
+#combine the mean_price, mean_reviews, mean_availability in one dataframe
 
-write.csv(mean_price_cities_euro1, 'mean_price_cities_euro1.csv')
+combined_mean_data <- cbind(mean_price_cities_euro1, mean_reviews, mean_availability)
+combined_mean_data1 <-combined_mean_data[-c(3, 5)]
+
+
+#Download output
+
+write.csv(combined_mean_data1, "../../gen/dataprep/output/combined_mean_data1", row.names = FALSE)
+
+write.csv(combined_mean_data1, 'combined_mean_data1')
 
