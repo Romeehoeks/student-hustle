@@ -9,24 +9,27 @@ library(dplyr)
 library(broom)
 library(ggpubr)
 
+
 #read data
 
-mean_price_cities_euro1 <- read.csv(file = '../../gen/dataprep/input/mean_price_cities_euro1.csv')
 combined_mean_data1 <- read.csv(file = '../../gen/dataprep/input/combined_mean_data1.csv')
-mean_reviews <- read.csv(file = '../../gen/dataprep/input/mean_reviews.csv')
 private_room <- read.csv(file = '../../gen/dataprep/output/private_room.csv')
-
 
 #plot the mean prices. As you can see the price in dublin is the highest, and in manchester the lowest.
 
-ggplot(mean_price_cities_euro1, aes(x= city, y=mean_price, color = city)) +
+ggplot(combined_mean_data1, aes(x= city, y=mean_price, color = city)) +
   geom_point() 
 ggsave("mean_price.pdf")
 
 #plot the mean reviews per city. As you can see the highest score is in edinburgh, the lowest is in barcelona
 
-ggplot(mean_reviews, aes(x= city, y=mean_reviews1, color = city)) +geom_point()
+ggplot(combined_mean_data1, aes(x= city, y=mean_reviews1, color = city)) +geom_point()
 ggsave("mean_reviews.pdf")
+
+#plot the mean availability per city. 
+
+ggplot(combined_mean_data1, aes(x= city, y=mean_availability, color = city)) +geom_point()
+ggsave("mean_availability.pdf")
 
 
 #Check if price and reviews have a relationship
