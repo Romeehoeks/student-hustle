@@ -29,7 +29,7 @@ downloaded_data = do.call('rbind', datasets)
 #Export to csv
 dir.create('../../gen')
 dir.create('../../gen/dataprep')
-dir.create('../../gen/data-prep/data')
+dir.create('../../gen/dataprep/data')
 write.csv(downloaded_data, "../../gen/dataprep/data/downloaded_data.csv", row.names = FALSE)
 
 
