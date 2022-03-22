@@ -10,8 +10,13 @@ library(broom)
 library(ggpubr)
 
 #read data
+
 mean_price_cities_euro1 <- read.csv(file = '../../gen/dataprep/input/mean_price_cities_euro1.csv')
 combined_mean_data1 <- read.csv(file = '../../gen/dataprep/input/combined_mean_data1.csv')
+mean_reviews <- read.csv(file = '../../gen/dataprep/input/mean_reviews.csv')
+private_room <- read.csv(file = '../../gen/dataprep/output/private_room.csv')
+
+
 #plot the mean prices. As you can see the price in dublin is the highest, and in manchester the lowest.
 
 ggplot(mean_price_cities_euro1, aes(x= city, y=mean_price, color = city)) +
@@ -58,6 +63,10 @@ top10[nrow(top10) + 1,] = citybarcelona
 #changing the row names
 
 rownames(top10) <- c("berlin", "copenhagen", "dublin", "edinburgh", "london", "manchester", "munich", "paris", "vienna", "barcelona")
+
+#Rounding the final review scores
+top10<- top10 %>%
+  mutate_if(is.numeric, round, digits =3)
 
 ##Step 5
 #Create a table for the top 10 student cities in Europe ascending
