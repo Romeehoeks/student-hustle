@@ -1,5 +1,7 @@
 ##Step 5
 
+#Load libraries
+
 library(effects)
 library(carData)
 library(ggplot2)
@@ -7,28 +9,20 @@ library(dplyr)
 library(broom)
 library(ggpubr)
 
+#read data
+mean_price_cities_euro1 <- read.csv(file = '../../gen/dataprep/input/mean_price_cities_euro1.csv')
+combined_mean_data1 <- read.csv(file = '../../gen/dataprep/input/combined_mean_data1.csv')
 #plot the mean prices. As you can see the price in dublin is the highest, and in manchester the lowest.
 
 ggplot(mean_price_cities_euro1, aes(x= city, y=mean_price, color = city)) +
   geom_point() 
 ggsave("mean_price.pdf")
 
-#create a table for the mean reviews per city
-
-mean_reviews <- aggregate(private_room$review_scores_rating, list(private_room$city), FUN=mean)
-names(mean_reviews)[1]<- "city"
-names(mean_reviews)[2]<- "mean_reviews1"
-
 #plot the mean reviews per city. As you can see the highest score is in edinburgh, the lowest is in barcelona
 
 ggplot(mean_reviews, aes(x= city, y=mean_reviews1, color = city)) +geom_point()
 ggsave("mean_reviews.pdf")
 
-#combine the mean_price, mean_reviews, mean_availability in one dataframe
-
-combined_mean_data <- cbind(mean_price_cities_euro1, mean_reviews, mean_availability)
-combined_mean_data1 <-combined_mean_data[-c(3, 5)]
-write.csv(combined_mean_data1, 'combined_mean_data1')
 
 #Check if price and reviews have a relationship
 
