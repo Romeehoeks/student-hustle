@@ -29,9 +29,9 @@ private_room <- filtered_data %>% filter(grepl('Private room in bungalow|Private
 
 
 dir.create('../../gen')
-dir.create('../../gen/data-preparation')
-dir.create('../../gen/data-preparation/input')
-write.csv(private_room, "../../gen/data-preparation/output/private_room.csv", row.names = FALSE)
+dir.create('../../gen/dataprep')
+dir.create('../../gen/dataprep/input')
+write.csv(private_room, "../../gen/dataprep/output/private_room.csv", row.names = FALSE)
 
 
 
