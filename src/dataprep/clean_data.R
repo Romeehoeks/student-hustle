@@ -14,8 +14,7 @@ is.numeric(private_room$price)
 is.numeric(private_room$availability_365)
 is.numeric(private_room$number_of_reviews)
 is.numeric(private_room$review_scores_rating)
-class(private_room$price)
-assert_is_numeric(private_room$price)    
+class(private_room$price)  
 
 #Remove dollar sign from prive to convert as nummeric
 
