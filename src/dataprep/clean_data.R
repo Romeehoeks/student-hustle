@@ -5,7 +5,8 @@ library(assertive)
 library(dplyr)
 library(readr)
 
-
+#Real file
+private_room <- read.csv(file = '../../gen/dataprep/output/private_room.csv')
 #Check if the variables are numeric
 
 is.numeric(private_room$host_listings_count)
