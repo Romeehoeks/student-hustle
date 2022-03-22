@@ -61,6 +61,7 @@ mean_price_cities_euro1 <- mean_price_cities_euro %>%
         TRUE ~ as.numeric(mean_price))) %>%
           mutate(mean_price = case_when(city == 'edinburgh' ~ mean_price / 1.19,
             TRUE ~ as.numeric(mean_price)))
+
 dir.create('../../gen')
 dir.create('../../gen/data-preparation')
 dir.create('../../gen/data-preparation/ouput')
