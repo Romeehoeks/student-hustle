@@ -1,3 +1,11 @@
+#step 4
+
+library(tidyverse)
+library(assertive)
+library(dplyr)
+library(readr)
+
+
 #Check if the variables are numeric
 
 is.numeric(private_room$host_listings_count)
@@ -54,7 +62,5 @@ mean_price_cities_euro1 <- mean_price_cities_euro %>%
           mutate(mean_price = case_when(city == 'edinburgh' ~ mean_price / 1.19,
             TRUE ~ as.numeric(mean_price)))
 
-write.csv(filtered_data, 'filtered_data.csv')
-write.csv(private_room, 'private_room.csv')
 write.csv(mean_price_cities_euro1, 'mean_price_cities_euro1.csv')
 
