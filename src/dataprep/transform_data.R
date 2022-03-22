@@ -5,7 +5,7 @@ library(dplyr)
 library(readr)
 
 #Read csv
-downloaded_data <- read.csv("downloaded_data.csv")
+downloaded_data <- read.csv(file = '../../gen/dataprep/data/downloaded_data.csv')
 
 #Select the data we need to use for our research
 
