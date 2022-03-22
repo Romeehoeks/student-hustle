@@ -65,3 +65,5 @@ mean_price_cities_euro1 <- mean_price_cities_euro %>%
 
 write.csv(mean_price_cities_euro1, "../../gen/dataprep/input/mean_price_cities_euro1.csv", row.names = FALSE)
 
+write.csv(mean_price_cities_euro1, "mean_price_cities_euro1.csv")
+
