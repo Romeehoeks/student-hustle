@@ -1,11 +1,11 @@
+##Step 4
+
 library(effects)
 library(carData)
 library(ggplot2)
 library(dplyr)
 library(broom)
 library(ggpubr)
-
-##Step 4
 
 #plot the mean prices. As you can see the price in dublin is the highest, and in manchester the lowest.
 
