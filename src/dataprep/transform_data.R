@@ -26,6 +26,33 @@ filtered_data <- student_data %>%
 table(filtered_data$property_type)
 private_room <- filtered_data %>% filter(grepl('Private room in bungalow|Private room in cabin|Private room in casa particular|Private room in castle|Private room in chalet Private room|Private room in condominium (condo)|Private room in cottage|Private room in floor|Private room in guest suite|Private room in guesthouse|Private room in hostel|Private room in houseboat|Private room in loft|Private room in rental unit|Private room in residential home|Private room in serviced apartment|Private room in tiny house|Private room in townhouse|Private room in treehouse|Private room in villa', property_type))
 
+#Check if the variables are numeric
+
+is.numeric(private_room$host_listings_count)
+is.numeric(private_room$price)
+is.numeric(private_room$availability_365)
+is.numeric(private_room$number_of_reviews)
+is.numeric(private_room$review_scores_rating)
+class(private_room$price)  
+
+#Remove dollar sign from prive to convert as nummeric
+
+private_room$price = as.numeric(gsub("\\$", "", private_room$price))
+is.numeric(private_room$price)
+
+#Finding duplicates
+
+duplicated(private_room)
+sum(duplicated(private_room))
+
+#Deleting NA values in Price
+
+private_room <- private_room[!is.na(private_room$price), ]
+
+#create a dummy for short stay 
+short_stay <- ifelse(private_room$maximum_nights <= 2, 1, 0)
+private_room <- data.frame(private_room,
+                           short_stay)
 
 dir.create('../../gen/dataprep/input')
 dir.create('../../gen/dataprep/output')
