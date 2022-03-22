@@ -63,7 +63,7 @@ mean_price_cities_euro1 <- mean_price_cities_euro %>%
           mutate(mean_price = case_when(city == 'edinburgh' ~ mean_price / 1.19,
             TRUE ~ as.numeric(mean_price)))
 
-write.csv(mean_price_cities_euro1, "../../gen/dataprep/input/mean_price_cities_euro1.csv", row.names = FALSE)
+write.csv(mean_price_cities_euro1, "../../gen/dataprep/output/mean_price_cities_euro1.csv", row.names = FALSE)
 
 write.csv(mean_price_cities_euro1, 'mean_price_cities_euro1.csv')
 
