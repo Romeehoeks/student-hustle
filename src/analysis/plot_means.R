@@ -5,7 +5,6 @@ library(carData)
 library(ggplot2)
 library(dplyr)
 library(broom)
-library(ggpubr)
 
 ########1
 #read data
