@@ -7,7 +7,7 @@ rownames(top10_student_cities) <- c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
 top10_student_cities <- as.table(top10_student_cities)
 
 #Create a loop for the position of the student cities
-sink("../../gen/analysis/output/top_10_student_cities.pdf")
+sink("../../gen/analysis/output/top_10_student_cities.txt")
 for(i in 1:length(top10_student_cities)) {
   print(paste(top10_student_cities[i], "is the number",
               i, "student city in Europe to rent out your student room"))
