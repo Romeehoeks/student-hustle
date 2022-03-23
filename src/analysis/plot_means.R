@@ -27,3 +27,7 @@ ggsave("mean_reviews.pdf")
 
 ggplot(combined_mean_data1, aes(x= city, y=mean_availability, color = city)) +geom_point()
 ggsave("mean_availability.pdf")
+
+dir.create('../../gen/analysis')
+dir.create('../../gen/analysis/data')
+dir.create('../../gen/analysis/output')
