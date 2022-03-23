@@ -2,7 +2,7 @@ INPUT = ../../gen/dataprep/input
 OUTPUT = ../../gen/dataprep/output
 DATA = ../../data
 
-	all: $(DATA)/downloaded_data.csv $(OUTPUT)/private_room.csv $(INPUT)combined_mean_data1.csv 
+all: $(DATA)/downloaded_data.csv $(OUTPUT)/private_room.csv $(INPUT)/combined_mean_data1.csv 
 
 $(DATA)/downloaded_data.csv: download_files.R
 	R --vanilla < download_files.R
