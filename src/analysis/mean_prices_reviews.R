@@ -55,5 +55,5 @@ rownames(top10) <- c("berlin", "copenhagen", "dublin", "edinburgh", "london", "m
 top10<- top10 %>%
   mutate_if(is.numeric, round, digits =3)
 
-write.csv(top10, "../../gen/dataprep/output/top10", row.names = FALSE)
+write.csv(top10, "../../gen/analysis/output/top10", row.names = FALSE)
 
