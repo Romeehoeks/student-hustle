@@ -11,7 +11,7 @@ combined_mean_data1 <- read.csv(file = '../../gen/dataprep/input/combined_mean_d
 private_room <- read.csv(file = '../../gen/dataprep/output/private_room.csv')
 
 #Check if price and reviews have a relationship
-sink("../../gen/analysis/data/price_regression.pdf") 
+sink("../../gen/analysis/data/price_regression.txt") 
 reg1 <- lm(review_scores_rating ~ price, data = private_room)
 summary(reg1)
 sink()
