@@ -1,34 +1,4 @@
 ##Step 5
-
-#Load libraries
-library(carData)
-library(ggplot2)
-library(dplyr)
-library(broom)
-library(ggpubr)
-
-########1
-#read data
-
-combined_mean_data1 <- read.csv(file = '../../gen/dataprep/input/combined_mean_data1.csv')
-private_room <- read.csv(file = '../../gen/dataprep/output/private_room.csv')
-
-#plot the mean prices. As you can see the price in dublin is the highest, and in manchester the lowest.
-
-ggplot(combined_mean_data1, aes(x= city, y=mean_price, color = city)) +
-  geom_point() 
-ggsave("mean_price.pdf")
-
-#plot the mean reviews per city. As you can see the highest score is in edinburgh, the lowest is in barcelona
-
-ggplot(combined_mean_data1, aes(x= city, y=mean_reviews1, color = city)) +geom_point()
-ggsave("mean_reviews.pdf")
-
-#plot the mean availability per city. 
-
-ggplot(combined_mean_data1, aes(x= city, y=mean_availability, color = city)) +geom_point()
-ggsave("mean_availability.pdf")
-
 #######2
 
 library(effects)
@@ -42,19 +12,24 @@ combined_mean_data1 <- read.csv(file = '../../gen/dataprep/input/combined_mean_d
 private_room <- read.csv(file = '../../gen/dataprep/output/private_room.csv')
 
 #Check if price and reviews have a relationship
-
+pdf("price_regression_effects.pdf") 
 reg1 <- lm(review_scores_rating ~ price, data = private_room)
 summary(reg1)
+dev.off()
 
 #check if reviews and availability have a relationship
 
+pdf("availability_regression.pdf") 
 reg2 <- lm(review_scores_rating ~ availability_365, data = private_room)
 summary(reg2)
+dev.off()
 
 #regression with multiple variables
 
+pdf("multiple_regression.pdf") 
 regression <- lm(review_scores_rating ~ price + availability_365 + short_stay +city, data=private_room)
 summary(regression)
+dev.off()
 
 #plot of our regression model
 
@@ -80,4 +55,5 @@ rownames(top10) <- c("berlin", "copenhagen", "dublin", "edinburgh", "london", "m
 top10<- top10 %>%
   mutate_if(is.numeric, round, digits =3)
 
+write.csv(top10, "../../gen/dataprep/output/top10", row.names = FALSE)
 
