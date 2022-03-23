@@ -1,0 +1,108 @@
+---
+title: "Student Hustle Data Analysis "
+output: pdf_document
+author: "Dprep Team 3"
+date: '2022-03-21'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(effects)
+library(carData)
+library(ggplot2)
+library(dplyr)
+library(broom)
+library(ggpubr)
+```
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, results='hide'}
+combined_mean_data1 <- read.csv(file = 'gen/dataprep/input/combined_mean_data1.csv')
+private_room <- read.csv(file = 'gen/dataprep/output/private_room.csv')
+```
+
+## Mean prices
+
+We have calculated the average price per night per city. In the plot it can be shown that the highest price is in Dublin with an average of 68.55 euro' s per night and the lowest price is in Manchester with an average of 32.70 euro's per night.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
+ggplot(combined_mean_data1, aes(x= city, y=mean_price, color = city)) +
+  geom_point() 
+```
+
+## Mean reviews
+
+You can also embed plots, for example:
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
+ggplot(combined_mean_data1, aes(x= city, y=mean_reviews1, color = city)) +geom_point()
+ggsave("mean_reviews.pdf")
+```
+
+## Mean availability
+
+You can also embed plots, for example:
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
+ggplot(combined_mean_data1, aes(x= city, y=mean_availability, color = city)) +geom_point()
+ggsave("mean_availability.pdf")
+```
+
+## Relationship between price and review score rating
+
+We woulod like to investigate if the review score rating and price have a relationship. Does it mean that if the price increases the review score rating decreases or even increases?
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, results='hide'}
+reg1 <- lm(review_scores_rating ~ price, data = private_room)
+summary(reg1)
+```
+However, after investigation we could not say that it has a relationship as the P value was not significant. 
+## Relationship between price and availability
+
+You can also embed plots, for example:
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, results='hide'}
+reg2 <- lm(review_scores_rating ~ availability_365, data = private_room)
+summary(reg2)
+```
+
+## Multiple regression with price, availability, short_stay and city
+
+You can also embed plots, for example:
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
+regression <- lm(review_scores_rating ~ price + availability_365 + short_stay +city, data=private_room)
+summary(regression)
+
+#plot of our regression model
+
+plot(allEffects(regression), ylim={c(4.5, 5)})
+
+```
+
+## Regression model
+```{r echo=FALSE, message=FALSE, warning=FALSE, results='hide'}
+
+```
+
+##Top 10 
+```{r echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
+top10<-summary(regression)$coefficients[1,1]+summary(regression)$coefficients[2,1]*combined_mean_data1$mean_price[2:10]+summary(regression)$coefficients[3,1]*combined_mean_data1$mean_availability[2:10]+summary(regression)$coefficients[4,1]+summary(regression)$coefficients[5:13,1] 
+top10 <-as.data.frame(top10)
+
+#As Barcelona is the 'base coefficient' we need to add this one seperately
+
+citybarcelona <- summary(regression)$coefficients[1,1]+summary(regression)$coefficients[2,1]*combined_mean_data1$mean_price[1]+summary(regression)$coefficients[3,1]*combined_mean_data1$mean_availability[1]+summary(regression)$coefficients[4,1] 
+top10[nrow(top10) + 1,] = citybarcelona
+
+#changing the row names
+
+rownames(top10) <- c("berlin", "copenhagen", "dublin", "edinburgh", "london", "manchester", "munich", "paris", "vienna", "barcelona")
+
+#Rounding the final review scores
+top10<- top10 %>%
+  mutate_if(is.numeric, round, digits =3)
+
+View(top10)
+```
+
+##Conclusion
