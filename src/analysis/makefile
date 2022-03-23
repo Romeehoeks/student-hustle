@@ -1,9 +1,9 @@
 DATA = ../../gen/analysis/input
 OUTPUT = ../../gen/analysis/output
 
-all:$(DATA)/plot_all.pdf $(DATA)/plot_all.pdf: $(DATA)/top10_student_cities.csv: 
+all:$(DATA)/mean_price.pdf $(DATA)/mean_reviews.pdf $(DATA)/mean_availability.pdf $(OUTPUT)/top10.csv $(OUTPUT)/top10_student_cities.csv
 
-$(INPUT)/mean_price.pdf $(DATA)/mean_reviews.pdf $(DATA)/mean_availability.pdf: plot_means.R
+$(DATA)/mean_price.pdf $(DATA)/mean_reviews.pdf $(DATA)/mean_availability.pdf: plot_means.R
   R --vanilla < plot_means.R
   
 $(OUTPUT)/top10.csv: mean_prices_reviews.R
