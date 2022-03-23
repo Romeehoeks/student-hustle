@@ -12,24 +12,20 @@ combined_mean_data1 <- read.csv(file = '../../gen/dataprep/input/combined_mean_d
 private_room <- read.csv(file = '../../gen/dataprep/output/private_room.csv')
 
 #Check if price and reviews have a relationship
-pdf("price_regression_effects.pdf") 
+
 reg1 <- lm(review_scores_rating ~ price, data = private_room)
 summary(reg1)
-dev.off()
 
 #check if reviews and availability have a relationship
 
-pdf("availability_regression.pdf") 
 reg2 <- lm(review_scores_rating ~ availability_365, data = private_room)
 summary(reg2)
-dev.off()
 
 #regression with multiple variables
 
-pdf("multiple_regression.pdf") 
 regression <- lm(review_scores_rating ~ price + availability_365 + short_stay +city, data=private_room)
 summary(regression)
-dev.off()
+
 
 #plot of our regression model
 
@@ -55,5 +51,7 @@ rownames(top10) <- c("berlin", "copenhagen", "dublin", "edinburgh", "london", "m
 top10<- top10 %>%
   mutate_if(is.numeric, round, digits =3)
 
-write.csv(top10, "../../gen/analysis/output/top10.csv", row.names = FALSE)
-
+write.csv(top10, "../../gen/analysis/output/top10.csv", row.names = TRUE)
+write.csv(reg1, "../../gen/analysis/output/reg1.csv", row.names = FALSE)
+write.csv(reg2, "../../gen/analysis/output/reg2.csv", row.names = FALSE)
+write.csv(regression, "../../gen/analysis/output/regression.csv", row.names = FALSE)
