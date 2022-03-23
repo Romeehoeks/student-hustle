@@ -39,7 +39,7 @@ And the R-squared shows...
 ## Repository overview
 This project contains the following files and folders:
 
-- data > this folder contains all our raw data files which we found on the website: http://insideairbnb.com/ 
+- data > this folder contains all our raw data files which we found on [this link](http://insideairbnb.com/). 
 - gen > this file shows the input and output of our code. This is also a place where we store our temporary data, which is not relevant to the final results. 
 - src > this is called the source file. It contains the different elements of our code. Here you could find the analysis that was made and the data preparations. Also, the final paper is in this folder.
 - README.md > this file are you currently reading
