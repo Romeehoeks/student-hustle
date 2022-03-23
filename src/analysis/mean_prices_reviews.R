@@ -1,15 +1,13 @@
 ##Step 5
 
 #Load libraries
-
-library(effects)
 library(carData)
 library(ggplot2)
 library(dplyr)
 library(broom)
 library(ggpubr)
 
-
+########1
 #read data
 
 combined_mean_data1 <- read.csv(file = '../../gen/dataprep/input/combined_mean_data1.csv')
@@ -31,6 +29,17 @@ ggsave("mean_reviews.pdf")
 ggplot(combined_mean_data1, aes(x= city, y=mean_availability, color = city)) +geom_point()
 ggsave("mean_availability.pdf")
 
+#######2
+
+library(effects)
+library(carData)
+library(ggplot2)
+library(dplyr)
+library(broom)
+library(ggpubr)
+
+combined_mean_data1 <- read.csv(file = '../../gen/dataprep/input/combined_mean_data1.csv')
+private_room <- read.csv(file = '../../gen/dataprep/output/private_room.csv')
 
 #Check if price and reviews have a relationship
 
@@ -70,6 +79,9 @@ rownames(top10) <- c("berlin", "copenhagen", "dublin", "edinburgh", "london", "m
 #Rounding the final review scores
 top10<- top10 %>%
   mutate_if(is.numeric, round, digits =3)
+
+
+######3
 
 ##Step 5
 #Create a table for the top 10 student cities in Europe ascending
