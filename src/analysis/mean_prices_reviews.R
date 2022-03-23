@@ -23,7 +23,7 @@ summary(reg2)
 sink()
 
 #regression with multiple variables
-sink("../../gen/analysis/data/output/multiple_regression.txt") 
+sink("../../gen/analysis/output/multiple_regression.txt") 
 regression <- lm(review_scores_rating ~ price + availability_365 + short_stay +city, data=private_room)
 summary(regression)
 sink()
