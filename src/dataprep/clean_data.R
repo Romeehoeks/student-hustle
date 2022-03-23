@@ -30,7 +30,7 @@ mean_price_cities_euro <- mean_price_cities %>%
   mutate(mean_price = case_when(city == 'copenhagen' ~ mean_price * 0.10,
                                 TRUE ~ as.numeric(mean_price)))
 
-#Change pound to dollar
+#Change pound to euro
 
 mean_price_cities_euro1 <- mean_price_cities_euro %>%
   mutate(mean_price = case_when(city == 'london' ~ mean_price / 1.19,
