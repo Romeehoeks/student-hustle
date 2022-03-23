@@ -6,7 +6,6 @@ library(carData)
 library(ggplot2)
 library(dplyr)
 library(broom)
-library(ggpubr)
 
 combined_mean_data1 <- read.csv(file = '../../gen/dataprep/input/combined_mean_data1.csv')
 private_room <- read.csv(file = '../../gen/dataprep/output/private_room.csv')
