@@ -9,7 +9,6 @@ library(ggpubr)
 #read data
 
 combined_mean_data1 <- read.csv(file = '../../gen/dataprep/input/combined_mean_data1.csv')
-private_room <- read.csv(file = '../../gen/dataprep/output/private_room.csv')
 
 #plot the mean prices. As you can see the price in dublin is the highest, and in manchester the lowest.
 
