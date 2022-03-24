@@ -27,7 +27,7 @@ A linear regression was performed to examine the relationship between different 
 
 ![image](https://user-images.githubusercontent.com/26276634/159989283-2d6b6517-96a7-41fa-8f2f-0e8e57615d64.png)
 
-Table 1
+*Table 1*
 
 The results of the linear regression showed that price and availability have a significant influence on the review of the listing. The regression coefficient of price shows that price has a positive influence on reviews per listing, indicating that if the price increases the review score per listing also significantly increases. This makes sense as generally, the higher the price, the higher the ‘quality’ of the room. Therefore, if the price for a listing increases, the higher the review score as this generally reflects the quality of the stay.  
 
@@ -37,7 +37,7 @@ Furthermore, the results showed that short stay does not have a significant impa
 
 ![image](https://user-images.githubusercontent.com/26276634/159989437-226d0bee-0591-45e2-8fda-7c10589ec76c.png)
 
-Figure 1
+*Figure 1*
 
 *R-squared*
 Worthwhile to mention is that it can be stated that the model poorly explained the variation as the coefficient of determination is close to 0 (R2 = .088). This means that the independent variables explains only 8.8% of the variance in review score per listing. 
@@ -50,7 +50,7 @@ The intercept coefficient in Table 1 represents Barcelona. Based on the above me
 
 ![image](https://user-images.githubusercontent.com/26276634/159989673-0446c53d-dcb0-4c4f-8c18-5aefd321785f.png)
 
-Table 2
+*Table 2*
 
 To conclude, based on the data of Airbnb, it can be stated that it is most attractive to rent out your private room on Airbnb in Edinburgh. 
 
