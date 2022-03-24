@@ -54,7 +54,7 @@ The intercept coefficient in Table 1 represents Barcelona. Based on the above me
 
 To conclude, based on the data of Airbnb, it can be stated that it is most attractive to rent out your private room on Airbnb in Edinburgh. 
 
-** Please note that more detailed information about the analyses and calculations can be found in paper and R Markdown. Both can be found in the folder of this repository. **
+**Please note that more detailed information about the analyses and calculations can be found in paper and R Markdown. Both can be found in the folder of this repository.**
 
 ## Repository overview
 This project contains the following files and folders:
