@@ -1,3 +1,19 @@
+#step 1
+#download packages
+install.packages("googledrive", repos= 'http://cran.us.r-project.org')
+install.packages("readr", repos= 'http://cran.us.r-project.org')
+install.packages("tidyverse", repos= 'http://cran.us.r-project.org')
+install.packages("dplyr", repos= 'http://cran.us.r-project.org')
+install.packages("assertive", repos= 'http://cran.us.r-project.org')
+install.packages("stringr", repos= 'http://cran.us.r-project.org')
+install.packages("ggplot2", repos= 'http://cran.us.r-project.org')
+install.packages("‘AggregateR", repos= 'http://cran.us.r-project.org')
+install.packages("effects", repos= 'http://cran.us.r-project.org')
+install.packages("knitr", repos= 'http://cran.us.r-project.org')
+install.packages("ggpubr", repos= 'http://cran.us.r-project.org')
+install.packages("markdown", repos= 'http://cran.us.r-project.org')
+
+
 #step 2
 library(googledrive)
 library(readr)
