@@ -21,20 +21,26 @@ In this research, it is expected that renting out a student room is an opportuni
 
 
 ## Method and results
-To find out the most attractive city to rent out your room, we did the following:
-- calculate average income and availability (this will be the independent variables)
-- define the dependent variable. These will be the reviews/ratings per room
-- examine the relationship between the IV and the DV
-- If the relationship is significant, we could calculate in which city it would be most attractive to rent out your room
+In order to find out which city is most attractive to rent out your room, several analyses were done. In this research, attractiveness is represented by review scores. It is expected that reviews are influenced by the variables price, availability and short stays. Therefore, these variables are further analyzed. 
 
-Why did we use linear regression, instead of for example a factor analysis? The p-values show the different mean of each variable and its difference with the DV.
+A linear regression was performed to examine the relationship between different independent variables ‘price’, ‘availability’ and ‘short stays’ and the dependent variable ‘review score’ all the variables. The output of the linear regression can be found in table below. 
 
-#### Results
-These graphs show our results. We can conclude that....
+The results of the linear regression showed that price and availability have a significant influence on the review of the listing. The regression coefficient of price shows that price has a positive influence on reviews per listing, indicating that if the price increases the review score per listing also significantly increases. This makes sense as generally, the higher the price, the higher the ‘quality’ of the room. Therefore, if the price for a listing increases, the higher the review score as this generally reflects the quality of the stay.  
 
-This is an overview of our linear regression:
+Regarding availability, the regression coefficient tells us that if the availability per listing increases, the reviews per listing significantly decreases. A reason for this could be that if a room is booked more often because it is more available, its furniture is used more often, which might negatively influence its condition. This might have a negative influence on the review per listing. 
 
-And the R-squared shows... 
+Furthermore, the results showed that short stay does not have a significant impact on review scores. Therefore, no conclusions can be made. Additionally, all the student cities significantly influences the review scores. The relations described above are visually represented in the plots in Figure 1.
+
+ 
+R-squared
+Worthwhile to mention is that it can be stated that the model poorly explained the variation as the coefficient of determination is close to 0 (R2 = .088). This means that the independent variables explains only 8.8% of the variance in review score per listing. 
+
+To find out which city is most attractive, further analysis and calculations are needed. First the mean price and mean availability are needed, which can be found in the overview below. Together with the coefficients in Table 1, the reviews per student city can be calculated. This results in the following formula:
+
+Intercept + (price * mean price per city) + (availability * mean availability per city) + coefficient short stay + coefficient per city.
+
+The intercept coefficient in Table 1 represents Barcelona. Based on the above mentioned formula, the review score per student city can be calculated. The results per city can be found below. The table shows that Edinburgh has the highest score, Based on this score, it can be stated that Edinburgh is the most attractive student city to rent out your room. 
+
 
 ## Repository overview
 This project contains the following files and folders:
