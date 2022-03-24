@@ -13,4 +13,3 @@ $(OUTPUT)/private_room.csv: $(DATA)/ downloaded_data.csv transform_data.R
 $(INPUT)/combined_mean_data1.csv: $(OUTPUT)/ private_room.csv clean_data.R
 	R --vanilla < clean_data.R
 	
-
