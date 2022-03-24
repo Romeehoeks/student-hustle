@@ -52,5 +52,5 @@ rownames(final_score) <- c("berlin", "copenhagen", "dublin", "edinburgh", "londo
 final_score<- final_score %>%
   mutate_if(is.numeric, round, digits =3)
 
-write.csv(final_score, "../../gen/analysis/output/final_score.csv", row.names = TRUE)
+write.csv(final_score, "../../gen/analysis/input/final_score.csv", row.names = TRUE)
 
