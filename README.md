@@ -1,6 +1,6 @@
 # AirBnB, the new student hustle?
 
-In which European city is renting out your private room on Airbnb most attractive in terms of income, ratings and coverage?
+In which European city is renting out your private room on Airbnb most attractive?
 
 ## Motivation
 Nowadays, everything is getting more and more expensive. This phenomenon can be explained by price inflation, which means that prices of goods and services go up in a given period. In the European Union, the inflation rate increased from 1.2% in January 2021 to 5.3% in December 2021 (Eurostat, 2022). Especially the prices of food, gas, and housing went up. Housing had to deal with the most significant rent increase in six years, which caused problems for many people, such as falling behind on their rent and increasing debts (CBS, 2020). Mainly students are struck because students cannot earn much money due to their study load. Most students only have a modest side job to finance their studies, life, and student accommodation. Therefore, the rising prices are a severe problem. It is allowed for students to sublet their student rooms if it does not violate the tenancy agreement (Rijksoverheid, 2022). Therefore, students can earn money to rent out their student room during periods their room is not occupied. 
@@ -25,22 +25,31 @@ In order to find out which city is most attractive to rent out your room, severa
 
 A linear regression was performed to examine the relationship between different independent variables ‘price’, ‘availability’ and ‘short stays’ and the dependent variable ‘review score’ all the variables. The output of the linear regression can be found in table below. 
 
+![image](https://user-images.githubusercontent.com/26276634/159989283-2d6b6517-96a7-41fa-8f2f-0e8e57615d64.png)
+Table 1
+
 The results of the linear regression showed that price and availability have a significant influence on the review of the listing. The regression coefficient of price shows that price has a positive influence on reviews per listing, indicating that if the price increases the review score per listing also significantly increases. This makes sense as generally, the higher the price, the higher the ‘quality’ of the room. Therefore, if the price for a listing increases, the higher the review score as this generally reflects the quality of the stay.  
 
 Regarding availability, the regression coefficient tells us that if the availability per listing increases, the reviews per listing significantly decreases. A reason for this could be that if a room is booked more often because it is more available, its furniture is used more often, which might negatively influence its condition. This might have a negative influence on the review per listing. 
 
 Furthermore, the results showed that short stay does not have a significant impact on review scores. Therefore, no conclusions can be made. Additionally, all the student cities significantly influences the review scores. The relations described above are visually represented in the plots in Figure 1.
 
- 
-R-squared
+![image](https://user-images.githubusercontent.com/26276634/159989437-226d0bee-0591-45e2-8fda-7c10589ec76c.png)
+Figure 1
+
+*R-squared*
 Worthwhile to mention is that it can be stated that the model poorly explained the variation as the coefficient of determination is close to 0 (R2 = .088). This means that the independent variables explains only 8.8% of the variance in review score per listing. 
 
-To find out which city is most attractive, further analysis and calculations are needed. First the mean price and mean availability are needed, which can be found in the overview below. Together with the coefficients in Table 1, the reviews per student city can be calculated. This results in the following formula:
+To find out which city is most attractive, further analysis and calculations are needed. First the mean price and mean availability are needed. Together with the coefficients in Table 1, the reviews per student city can be calculated. This results in the following formula:
 
-Intercept + (price * mean price per city) + (availability * mean availability per city) + coefficient short stay + coefficient per city.
+*Intercept + (price * mean price per city) + (availability * mean availability per city) + coefficient short stay + coefficient per city*
 
-The intercept coefficient in Table 1 represents Barcelona. Based on the above mentioned formula, the review score per student city can be calculated. The results per city can be found below. The table shows that Edinburgh has the highest score, Based on this score, it can be stated that Edinburgh is the most attractive student city to rent out your room. 
+The intercept coefficient in Table 1 represents Barcelona. Based on the above mentioned formula, the review score per student city can be calculated. The results per city can be found in Table 2. The table shows that Edinburgh has the highest score. Based on this score, it can be stated that Edinburgh is the most attractive student city to rent out your room. 
 
+![image](https://user-images.githubusercontent.com/26276634/159989673-0446c53d-dcb0-4c4f-8c18-5aefd321785f.png)
+Table 2
+
+To conclude, based on the data of Airbnb, it can be stated that it is most attractive to rent out your private room on Airbnb in Edinburgh. 
 
 ## Repository overview
 This project contains the following files and folders:
