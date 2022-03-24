@@ -1,17 +1,18 @@
 #step 1
 #download packages
-install.packages("googledrive", repos= 'http://cran.us.r-project.org')
-install.packages("readr", repos= 'http://cran.us.r-project.org')
-install.packages("tidyverse", repos= 'http://cran.us.r-project.org')
-install.packages("dplyr", repos= 'http://cran.us.r-project.org')
-install.packages("assertive", repos= 'http://cran.us.r-project.org')
-install.packages("stringr", repos= 'http://cran.us.r-project.org')
-install.packages("ggplot2", repos= 'http://cran.us.r-project.org')
-install.packages("‘AggregateR", repos= 'http://cran.us.r-project.org')
-install.packages("effects", repos= 'http://cran.us.r-project.org')
-install.packages("knitr", repos= 'http://cran.us.r-project.org')
-install.packages("ggpubr", repos= 'http://cran.us.r-project.org')
-install.packages("markdown", repos= 'http://cran.us.r-project.org')
+install.packages("googledrive", repos= 'https://mirror.lyrahosting.com/CRAN/')
+install.packages("readr", repos= 'https://mirror.lyrahosting.com/CRAN/')
+install.packages("tidyverse", repos= 'https://mirror.lyrahosting.com/CRAN/')
+install.packages("dplyr", repos= 'https://mirror.lyrahosting.com/CRAN/')
+install.packages("assertive", repos= 'https://mirror.lyrahosting.com/CRAN/')
+install.packages("stringr", repos= 'https://mirror.lyrahosting.com/CRAN/')
+install.packages("ggplot2", repos= 'https://mirror.lyrahosting.com/CRAN/')
+install.packages("‘AggregateR", repos= 'https://mirror.lyrahosting.com/CRAN/')
+install.packages("effects", repos= 'https://mirror.lyrahosting.com/CRAN/')
+install.packages("knitr", repos= 'https://mirror.lyrahosting.com/CRAN/')
+install.packages("ggpubr", repos= 'https://mirror.lyrahosting.com/CRAN/')
+install.packages("markdown", repos= 'https://mirror.lyrahosting.com/CRAN/')
+
 
 
 #step 2
