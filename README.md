@@ -82,5 +82,5 @@ We found some more interesting resources about renting out your student room:
 - BRON
 
 ## About 
-This project is conducted by 5 ambitious Marketing Analytics students; Henk-Jan Klijsen, Marije  Kok, Max van der Meulen, Romée Hoeks and Thomas Hemrica for the course Data preparation. During this project, the learned skills will be put in practice to find out if it is attractive to rent out your own student room and if so, in which city is this the most attractive. 
+This project is conducted by 5 ambitious Marketing Analytics students; Henk-Jan Klijsen, Marije  Kok, Max van der Meulen, Romée Hoeks and Thomas Hemrica for the course Data preparation. During this project, the learned skills will be put in practice to find out in which European city it is most attractive to rent out your student room. 
 
