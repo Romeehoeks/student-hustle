@@ -1,4 +1,6 @@
 # AirBnB, the new student hustle?
+![Ontwerp zonder titel](https://user-images.githubusercontent.com/98810281/160016819-f0e427ff-1592-42be-9f70-e29ee614af09.png)
+
 
 In which European city is renting out your private room on Airbnb most attractive?
 
