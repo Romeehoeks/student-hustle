@@ -21,15 +21,15 @@ In this research, it is expected that renting out a student room is an opportuni
 
 
 ## Method and results
-In order to find out which city is most attractive to rent out your room, several analyses were done. In this research, attractiveness is represented by review scores. It is expected that reviews are influenced by the variables price, availability and short stays. Therefore, these variables are further analyzed. 
+In order to find out which city is most attractive to rent out your room, several analyses were done. In this research, attractiveness is represented by review scores. It is expected that reviews are influenced by the variables 'price', 'availability' and 'short stays'. Therefore, these variables are further analyzed. 
 
-A linear regression was performed to examine the relationship between different independent variables ‘price’, ‘availability’ and ‘short stays’ and the dependent variable ‘review score’ all the variables. The output of the linear regression can be found in table below. 
+A linear regression was performed to examine the relationship between different independent variables ‘price’, ‘availability’ and ‘short stays’ and the dependent variable ‘review score’. The output of the linear regression can be found in table below. 
 
 ![image](https://user-images.githubusercontent.com/26276634/159989283-2d6b6517-96a7-41fa-8f2f-0e8e57615d64.png)
 
 *Table 1*
 
-The results of the linear regression showed that price and availability have a significant influence on the review of the listing. The regression coefficient of price shows that price has a positive influence on reviews per listing, indicating that if the price increases the review score per listing also significantly increases. This makes sense as generally, the higher the price, the higher the ‘quality’ of the room. Therefore, if the price for a listing increases, the higher the review score as this generally reflects the quality of the stay.  
+The results of the linear regression showed that the variables price and availability have a significant influence on the review of the listing. The regression coefficient of price shows that price has a positive influence on reviews per listing, indicating that if the price increases the review score per listing also significantly increases. This makes sense as generally, the higher the price, the higher the ‘quality’ of the room. Therefore, if the price for a listing increases, the higher the review score as this generally reflects the quality of the stay.  
 
 Regarding availability, the regression coefficient tells us that if the availability per listing increases, the reviews per listing significantly decreases. A reason for this could be that if a room is booked more often because it is more available, its furniture is used more often, which might negatively influence its condition. This might have a negative influence on the review per listing. 
 
@@ -53,6 +53,8 @@ The intercept coefficient in Table 1 represents Barcelona. Based on the above me
 *Table 2*
 
 To conclude, based on the data of Airbnb, it can be stated that it is most attractive to rent out your private room on Airbnb in Edinburgh. 
+
+** Please note that more detailed information about the analyses and calculations can be found in paper and R Markdown. Both can be found in the folder of this repository. **
 
 ## Repository overview
 This project contains the following files and folders:
