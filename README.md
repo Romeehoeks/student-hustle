@@ -80,8 +80,8 @@ This project contains the following files and folders:
 - Run: cd student-hustle
 - Run: make
 
-Make will generated different files which can be find in:
-student-hustle/gen/analysis/output
+Make will generated different files which can be find in the folder:
+../../student-hustle/gen/analysis/output
 
 
 
