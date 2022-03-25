@@ -54,7 +54,7 @@ short_stay <- ifelse(private_room$maximum_nights <= 2, 1, 0)
 private_room <- data.frame(private_room,
                            short_stay)
 
-
+dir.create('../../gen/analysis')
 dir.create('../../gen/analysis/input')
 dir.create('../../gen/dataprep/output')
 
