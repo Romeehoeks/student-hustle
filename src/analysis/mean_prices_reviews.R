@@ -7,8 +7,8 @@ library(ggplot2)
 library(dplyr)
 library(broom)
 
-combined_mean_data1 <- read.csv(file = '../../gen/dataprep/input/combined_mean_data1.csv')
-private_room <- read.csv(file = '../../gen/dataprep/output/private_room.csv')
+combined_mean_data1 <- read.csv(file = '../../gen/analysis/input/combined_mean_data1.csv')
+private_room <- read.csv(file = '../../gen/analysis/input/private_room.csv')
 
 #Check if price and reviews have a relationship
 sink("../../gen/analysis/output/price_regression.txt") 
