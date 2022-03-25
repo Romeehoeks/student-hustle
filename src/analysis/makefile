@@ -9,6 +9,8 @@ $(OUTPUT)/mean_price.pdf $(OUTPUT)/mean_reviews.pdf $(OUTPUT)/mean_availability.
 $(INPUT)/final_score.csv: $(INPUT)/combined_mean_data1.csv $(OUTPUT)/ private_room.csv mean_prices_reviews.R 
 	R --vanilla < mean_prices_reviews.R
 
-  
 $(OUTPUT)/top10_student_cities.txt: position_studentcities.R 
 	R --vanilla < position_studentcities.R
+
+(OUTPUT)/analysis_markdown.rmd:$(OUTPUT)/private_room.csv $(INPUT)/combined_mean_data1.csv 
+	Rscript -e "rmarkdown::render('analysis_markdown.rmd')"
