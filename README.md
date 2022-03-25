@@ -79,8 +79,9 @@ This project contains the following files and folders:
 - Run: git clone _paste repository code_
 - Run: cd student-hustle
 - Run: make
-- 
 
+The generated files can be found in:
+- ../../gen/analysis/output
 
 
 
