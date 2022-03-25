@@ -1,6 +1,6 @@
 INPUT = ../../gen/dataprep/input
 OUTPUT = ../../gen/dataprep/output
-DATA = ../../data
+DATA = ../../gen/dataprep/data
 
 all: $(DATA)/downloaded_data.csv $(OUTPUT)/private_room.csv $(INPUT)/combined_mean_data1.csv 
 
