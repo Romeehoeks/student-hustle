@@ -12,5 +12,5 @@ $(INPUT)/final_score.csv: $(INPUT)/combined_mean_data1.csv $(OUTPUT)/ private_ro
 $(OUTPUT)/top10_student_cities.txt: position_studentcities.R 
 	R --vanilla < position_studentcities.R
 
-(OUTPUT)/analysis_markdown.rmd: $(OUTPUT)/private_room.csv $(INPUT)/combined_mean_data1.csv 
+$(OUTPUT)/analysis_markdown.rmd: $(OUTPUT)/private_room.csv $(INPUT)/combined_mean_data1.csv 
 	Rscript -e "rmarkdown::render('analysis_markdown.rmd')"
