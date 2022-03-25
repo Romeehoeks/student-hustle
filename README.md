@@ -79,9 +79,10 @@ This project is built with different pipelines, which you could find in the file
 ## More resources
 We found some more interesting resources about renting out your student room:
 
-- BRON
-- BRON
-- BRON
+More information about the legal part of renting out your student room in [this link](https://www.slimmecentenvoorstudenten.nl/je-studentenkamer-verhuren-via-airbnb-dit-zijn-de-regels/) and [this link](https://www.kamer.nl/blog/studentenkamer-op-airbnb-regels/)
+
+Some tips on renting out your student room in [this link](https://financialpanther.com/making-money-airbnb-rent-guest-room/)
+
 
 ## About 
 This project is conducted by 5 ambitious Marketing Analytics students; Henk-Jan Klijsen, Marije  Kok, Max van der Meulen, Romée Hoeks and Thomas Hemrica for the course Data preparation. During this project, the learned skills will be put in practice to find out in which European city it is most attractive to rent out your student room. 
