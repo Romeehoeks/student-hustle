@@ -1,7 +1,7 @@
 INPUT = ../../gen/analysis/input
 OUTPUT = ../../gen/analysis/output
 
-all: $(OUTPUT)/mean_price.pdf $(OUTPUT)/mean_reviews.pdf $(OUTPUT)/mean_availability.pdf $(DATA)/final_score.csv $(OUTPUT)/top10_student_cities.txt
+all: $(OUTPUT)/mean_price.pdf $(OUTPUT)/mean_reviews.pdf $(OUTPUT)/mean_availability.pdf $(DATA)/final_score.csv $(OUTPUT)/top10_student_cities.txt (OUTPUT)/analysis_markdown.rm
 
 $(OUTPUT)/mean_price.pdf $(OUTPUT)/mean_reviews.pdf $(OUTPUT)/mean_availability.pdf: $(INPUT)/combined_mean_data1.csv plot_means.R
 	R --vanilla < plot_means.R
