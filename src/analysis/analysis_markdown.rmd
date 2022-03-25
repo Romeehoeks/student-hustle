@@ -16,8 +16,9 @@ library(ggpubr)
 ```
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, results='hide'}
-combined_mean_data1 <- read.csv(file = 'gen/dataprep/input/combined_mean_data1.csv')
-private_room <- read.csv(file = 'gen/dataprep/output/private_room.csv')
+setwd("~/student-hustle/gen/analysis/input")
+combined_mean_data1 <- read.csv(file = 'gen/analysis/input/combined_mean_data1.csv')
+private_room <- read.csv(file = 'gen/analysis/input/private_room.csv')
 ```
 
 ## Mean prices
