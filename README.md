@@ -73,13 +73,13 @@ This project contains the following files and folders:
 - [R and Rstudio](https://tilburgsciencehub.com/building-blocks/configure-your-computer/statistics-and-computation/r/)
 - [Pandoc](https://pandoc.org/installing.html) version 1.12.1502 or higher required
 
-**Running code**
+**Running code:**
 - Copye the repository code
 - Open the terminal
 - Run: git clone _paste repository code_
 - Run: cd student-hustle
 - Run: make
-
+- 
 
 
 
