@@ -54,10 +54,11 @@ short_stay <- ifelse(private_room$maximum_nights <= 2, 1, 0)
 private_room <- data.frame(private_room,
                            short_stay)
 
-dir.create('../../gen/dataprep/input')
+
+dir.create('../../gen/analysis/input')
 dir.create('../../gen/dataprep/output')
 
-write.csv(private_room, "../../gen/dataprep/output/private_room.csv", row.names = FALSE)
+write.csv(private_room, "../../gen/analysis/input/private_room.csv", row.names = FALSE)
 write.csv(private_room, 'private_room.csv')
 
 
