@@ -68,10 +68,22 @@ This project contains the following files and folders:
 
 ## Running instructions
 
-Needed software:
+**Needed software:**
 - [Make](https://tilburgsciencehub.com/building-blocks/configure-your-computer/automation-and-workflows/make/) 
 - [R and Rstudio](https://tilburgsciencehub.com/building-blocks/configure-your-computer/statistics-and-computation/r/)
-- Tinytex
+- [Pandoc](https://pandoc.org/installing.html) version 1.12.1502 or higher required
+
+**Running code**
+- Copye the repository code
+- Open the terminal
+- Run: git clone _paste repository code_
+- Run: cd student-hustle
+- Run: make
+
+
+
+
+
 This project is built with different pipelines, which you could find in the file 'src'. You could replicate this project in a makefile and the order of that makefile is as follows: 
 
 1. src file for downloading packages
