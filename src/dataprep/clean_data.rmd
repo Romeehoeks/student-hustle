@@ -13,6 +13,7 @@ library(dplyr)
 library(googledrive)
 library(readr)
 library(knitr)
+tinytex::install_tinytex()
 ```
 
 ## Data Retrieval
