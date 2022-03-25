@@ -67,6 +67,11 @@ This project contains the following files and folders:
 - README.md > this file are you currently reading
 
 ## Running instructions
+
+Needed software:
+- [Make](https://tilburgsciencehub.com/building-blocks/configure-your-computer/automation-and-workflows/make/) 
+- [R and Rstudio](https://tilburgsciencehub.com/building-blocks/configure-your-computer/statistics-and-computation/r/)
+- Tinytex
 This project is built with different pipelines, which you could find in the file 'src'. You could replicate this project in a makefile and the order of that makefile is as follows: 
 
 1. src file for downloading packages
