@@ -72,6 +72,7 @@ This project contains the following files and folders:
 - [Make](https://tilburgsciencehub.com/building-blocks/configure-your-computer/automation-and-workflows/make/) 
 - [R and Rstudio](https://tilburgsciencehub.com/building-blocks/configure-your-computer/statistics-and-computation/r/)
 - [Pandoc](https://pandoc.org/installing.html) version 1.12.1502 or higher required
+- [XQuartz](https://www.xquartz.org) 
 
 **Running code:**
 - Copy the repository code
