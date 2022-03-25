@@ -9,11 +9,10 @@ library(broom)
 ########1
 #read data
 
-combined_mean_data1 <- read.csv(file = '../../gen/dataprep/input/combined_mean_data1.csv')
+combined_mean_data1 <- read.csv(file = '../../gen/analysis/input/combined_mean_data1.csv')
 
 #create directions
 
-dir.create('../../gen/analysis')
 dir.create('../../gen/analysis/data')
 dir.create('../../gen/analysis/output')
 
