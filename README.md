@@ -80,17 +80,8 @@ This project contains the following files and folders:
 - Run: cd student-hustle
 - Run: make
 
-The generated files can be found in:
-- ../../gen/analysis/output
-
-
-
-This project is built with different pipelines, which you could find in the file 'src'. You could replicate this project in a makefile and the order of that makefile is as follows: 
-
-1. src file for downloading packages
-2. src file for data preparation
-3. src file for analysis
-4. 
+Make will generated different files which can be find in:
+student-hustle/gen/analysis/output
 
 
 
