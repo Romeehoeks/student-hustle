@@ -11,13 +11,13 @@ combined_mean_data1 <- read.csv(file = '../../gen/dataprep/input/combined_mean_d
 private_room <- read.csv(file = '../../gen/dataprep/output/private_room.csv')
 
 #Check if price and reviews have a relationship
-sink("../../gen/analysis/data/price_regression.txt") 
+sink("../../gen/analysis/output/price_regression.txt") 
 reg1 <- lm(review_scores_rating ~ price, data = private_room)
 summary(reg1)
 sink()
 
 #check if reviews and availability have a relationship
-sink("../../gen/analysis/data/availability_regression.txt") 
+sink("../../gen/analysis/output/availability_regression.txt") 
 reg2 <- lm(review_scores_rating ~ availability_365, data = private_room)
 summary(reg2)
 sink()
@@ -52,6 +52,6 @@ rownames(final_score) <- c("berlin", "copenhagen", "dublin", "edinburgh", "londo
 final_score<- final_score %>%
   mutate_if(is.numeric, round, digits =3)
 
-dir.create("../../gen/analysis/input")
-write.csv(final_score, "../../gen/analysis/input/final_score.csv", row.names = TRUE)
+dir.create("../../gen/analysis/output")
+write.csv(final_score, "../../gen/analysis/output/final_score.csv", row.names = TRUE)
 
