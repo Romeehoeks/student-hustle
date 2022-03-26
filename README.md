@@ -58,13 +58,6 @@ To conclude, based on the data of Airbnb, it can be stated that it is most attra
 
 **Please note that more detailed information about the analyses and calculations can be found in the paper and R Markdown, which can be found in the folder of this repository.**
 
-## Repository overview
-This project contains the following files and folders:
-
-- data > this folder contains all our raw data files which we found on [this link](http://insideairbnb.com/). 
-- gen > this file shows the input and output of our code. This is also a place where we store our temporary data, which is not relevant to the final results. 
-- src > this is called the source file. It contains the different elements of our code. Here you could find the analysis that was made and the data preparations. Also, the final paper is in this folder.
-- README.md > this file are you currently reading
 
 ## Running instructions
 
@@ -88,7 +81,12 @@ The generated files can be found in the folder 'gen'.
 ![afbeelding](https://user-images.githubusercontent.com/98875680/160235006-d7064f2f-b81a-48b1-8c2f-8df7cb11b9ff.png)
 
 
+## Repository overview
+This project contains the following files and folders:
 
+- makefile > The makefile
+- gen > this file shows the generateed files of our code. It has different subfolders, the subfolder dataprep contains all the data that is needed to generate the files in the analysis map. The files in the analyse map contains all the information needed for our paper. 
+- src > this is called the source file. It contains the different elements of our code. Here you could find the analysis that was made and the data preparations. 
 ## More resources
 We found some more interesting resources about renting out your student room:
 
