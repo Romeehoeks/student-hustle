@@ -83,7 +83,7 @@ This project contains the following files and folders:
 
 The generated files can be found in the folder 'gen'.
 
-**Repocitory structure**
+**Repository structure**
 
 ![afbeelding](https://user-images.githubusercontent.com/98875680/160235006-d7064f2f-b81a-48b1-8c2f-8df7cb11b9ff.png)
 
