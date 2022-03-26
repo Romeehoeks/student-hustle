@@ -89,13 +89,14 @@ This project contains the following files and folders:
 - src > this is called the source file. This file has different subfolders as well. The dataprep contains the code that is needed to download and clean the data and the analysis data folder contains the code that is needed to make analysis of our paper. 
 
 ## More resources
-If you want more information about renting out your student room, then are here some extra resources that we found.
+If you want more information about renting out your student room, we found some extra resources.
 
 More information about the legal part of renting out your student room in [this link](https://www.slimmecentenvoorstudenten.nl/je-studentenkamer-verhuren-via-airbnb-dit-zijn-de-regels/) and [this link](https://www.kamer.nl/blog/studentenkamer-op-airbnb-regels/)
 
 Some tips on renting out your student room in [this link](https://financialpanther.com/making-money-airbnb-rent-guest-room/)
 
-Two articles about students who were not allowed to rent out there rooms and did it anyway in [this link](https://www.emerce.nl/wire/airbnb-zet-studenten-straat) and [this link](https://www.telegraaf.nl/financieel/3619364/studentenkamer-kwijt-na-doorverhuur-op-airbnb).
+Two articles about students who were not allowed to rent out their rooms and did it anyway in [this link](https://www.emerce.nl/wire/airbnb-zet-studenten-straat) and [this link](https://www.telegraaf.nl/financieel/3619364/studentenkamer-kwijt-na-doorverhuur-op-airbnb).
+
 
 
 ## About 
