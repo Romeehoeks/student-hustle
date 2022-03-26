@@ -47,10 +47,12 @@ final_score[nrow(final_score) + 1,] = citybarcelona
 #changing the row names
 
 rownames(final_score) <- c("berlin", "copenhagen", "dublin", "edinburgh", "london", "manchester", "munich", "paris", "vienna", "barcelona")
+names(final_score)[1]<-"score"
 
 #Rounding the final review scores
 final_score<- final_score %>%
   mutate_if(is.numeric, round, digits =3)
+final_score<- final_score %>% arrange(desc(score))
 
 dir.create("../../gen/analysis/output")
 write.csv(final_score, "../../gen/analysis/output/final_score.csv", row.names = TRUE)
