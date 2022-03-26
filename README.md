@@ -5,15 +5,16 @@
 **In which European city is renting out your private room on Airbnb most attractive?**
 
 ## Motivation
-Nowadays, everything is getting more and more expensive. This phenomenon can be explained by price inflation, which means that prices of goods and services go up in a given period. In the European Union, the inflation rate increased from 1.2% in January 2021 to 5.3% in December 2021 (Eurostat, 2022). Especially the prices of food, gas, and housing went up. Housing had to deal with the most significant rent increase in six years, which caused problems for many people, such as falling behind on their rent and increasing debts (CBS, 2020). Mainly students are struck because students cannot earn much money due to their study load. Most students only have a modest side job to finance their studies, life, and student accommodation. Therefore, the rising prices are a severe problem. It is allowed for students to sublet their student rooms if it does not violate the tenancy agreement (Rijksoverheid, 2022). Therefore, students can earn money to rent out their student room during periods their room is not occupied. 
+Nowadays, everything is getting more and more expensive. This phenomenon can be explained by price inflation, which means that prices of goods and services go up in a given period. In the European Union, the inflation rate increased from 1.2% in January 2021 to 5.3% in December 2021. Especially the prices of food, gas, and housing went up. Housing had to deal with the most significant rent increase in six years, which caused problems for many people, such as falling behind on their rent and increasing debts. Mainly students are struck because students cannot earn much money due to their study load. Most students only have a modest side job to finance their studies, life, and accommodation. Therefore, the rising prices are a severe problem. It is allowed for students to sublet their student rooms if it does not violate the tenancy agreement. Therefore, students can earn money to rent out their student room during periods their room is not occupied.
 
-Airbnb is one of the most popular online marketplaces for renting and leasing accommodation for the night. Most hosts use this platform to earn extra income on their most significant asset, their home. On the one hand, it is possible to rent out entire apartments, but on the other hand, it is also possible to rent out shared or private rooms. Airbnb has been taking the world by storm since 2008, with 4 million hosts and 1 billion guest arrivals worldwide ever since (Guttentag, 2015). Therefore, Airbnb might offer students the opportunity to earn money by subletting their private room to others. 
+Airbnb is one of the most popular online marketplaces for renting and leasing accommodation for the night. Most hosts use this platform to earn extra income on their most significant asset, their home. On the one hand, it is possible to rent out entire apartments, but on the other hand, it is also possible to rent out shared or private rooms. Airbnb has been taking the world by storm since 2008, with 4 million hosts and 1 billion guest arrivals worldwide ever since. Therefore, Airbnb might offer students the opportunity to earn money by subletting their private room to others.
 
-Furthermore, students have the opportunity to start their studies in a city or country of their choice. There are differences in terms of cost of livings between cities. It is interesting to investigate whether students can benefit more from renting out their room in one city than in another. Therefore, this research investigates different European cities to help and advise students. Hence, the following research question is defined:
+Furthermore, students have the opportunity to start their studies in a city or country of their choice. There are differences in terms of the cost of livings between cities. It is interesting to investigate whether students can benefit more from renting out their room in one city than in another. Therefore, this research investigates different European cities to help and advise students. Hence, the following research question is defined:
 
-**In which European city is renting out a private room on Airbnb most attractive?**
+*In which European city is renting out a private room on Airbnb most attractive?*
 
-In this research, it is expected that renting out a student room is an opportunity to generate some extra income. However, as cities in Europe differ from each other for example in terms of cost of living, it is expected that there are also differences in terms of coverage, satisfaction and estimated income for private rooms between European cities. Therefore, it is important to examine these differences between European cities. This research examines the differences between the top 10 student cities in Europe; London, Munich, Berlin, Paris, Zurich, Vienna, Edinburgh, Barcelona, Dublin and Manchester. 
+In this research, it is expected that renting out a student room is an opportunity to generate some extra income. However, as cities in Europe differ from each other, for example, in terms of cost of living, we expect a different level of attractiveness for each city. This research examines the differences between the top 10 student cities in Europe; London, Munich, Berlin, Paris, Zurich, Vienna, Edinburgh, Barcelona, Dublin, and Manchester.
+
 
 
 
@@ -86,12 +87,15 @@ This project contains the following files and folders:
 
 - gen > this file shows the generateed files of our code. It has different subfolders, the subfolder dataprep contains all the data that is needed to generate the files in the analysis map. The files in the analyse map contains all the information needed for our paper. 
 - src > this is called the source file. This file has different subfolders as well. The dataprep contains the code that is needed to download and clean the data and the analysis data folder contains the code that is needed to make analysis of our paper. 
+
 ## More resources
-We found some more interesting resources about renting out your student room:
+If you want more information about renting out your student room, then are here some extra resources that we found.
 
 More information about the legal part of renting out your student room in [this link](https://www.slimmecentenvoorstudenten.nl/je-studentenkamer-verhuren-via-airbnb-dit-zijn-de-regels/) and [this link](https://www.kamer.nl/blog/studentenkamer-op-airbnb-regels/)
 
 Some tips on renting out your student room in [this link](https://financialpanther.com/making-money-airbnb-rent-guest-room/)
+
+Two articles about students who were not allowed to rent out there rooms and did it anyway in [this link](https://www.emerce.nl/wire/airbnb-zet-studenten-straat) and [this link](https://www.telegraaf.nl/financieel/3619364/studentenkamer-kwijt-na-doorverhuur-op-airbnb).
 
 
 ## About 
