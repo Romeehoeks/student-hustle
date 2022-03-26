@@ -11,11 +11,6 @@ library(broom)
 
 combined_mean_data1 <- read.csv(file = '../../gen/analysis/input/combined_mean_data1.csv')
 
-#create directions
-
-dir.create('../../gen/analysis/data')
-dir.create('../../gen/analysis/output')
-
 #plot the mean prices. As you can see the price in dublin is the highest, and in manchester the lowest.
 
 ggplot(combined_mean_data1, aes(x= city, y=mean_price, color = city)) +
