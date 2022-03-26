@@ -51,6 +51,3 @@ dir.create('../../gen/dataprep/data')
 write.csv(downloaded_data, "../../gen/dataprep/data/downloaded_data.csv", row.names = FALSE)
 
 
-
-write.csv(downloaded_data, 'downloaded_data.csv')
-
