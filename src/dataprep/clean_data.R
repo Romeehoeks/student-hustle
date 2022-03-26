@@ -48,7 +48,7 @@ combined_mean_data1 <-combined_mean_data[-c(3, 5)]
 
 #Download output
 
-write.csv(combined_mean_data1, "../../gen/analysis/input/combined_mean_data1.csv", row.names = FALSE
+write.csv(combined_mean_data1, "../../gen/analysis/input/combined_mean_data1.csv", row.names = FALSE)
 
 
 
