@@ -12,6 +12,7 @@ install.packages("effects", repos= 'https://mirror.lyrahosting.com/CRAN/')
 install.packages("knitr", repos= 'https://mirror.lyrahosting.com/CRAN/')
 install.packages("ggpubr", repos= 'https://mirror.lyrahosting.com/CRAN/')
 install.packages("markdown", repos= 'https://mirror.lyrahosting.com/CRAN/')
+install.packages("stargazer", repos= 'https://mirror.lyrahosting.com/CRAN/')
 
 
 
