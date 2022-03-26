@@ -85,7 +85,7 @@ Make will generated different files which can be find in the folder:
 ../../student-hustle/gen/analysis/output
 
 **Repocitory structure**
-![afbeelding](https://user-images.githubusercontent.com/98875680/160234950-4e67cf26-f2c7-42b0-a794-865a5619e9fe.png)
+![afbeelding](https://user-images.githubusercontent.com/98875680/160234983-22c3f551-bef4-45fd-a35e-7e4754bc8b2d.png)
 
 
 ## More resources
