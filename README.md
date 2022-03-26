@@ -2,7 +2,7 @@
 ![Ontwerp zonder titel](https://user-images.githubusercontent.com/98810281/160016819-f0e427ff-1592-42be-9f70-e29ee614af09.png)
 
 
-In which European city is renting out your private room on Airbnb most attractive?
+**In which European city is renting out your private room on Airbnb most attractive?**
 
 ## Motivation
 Nowadays, everything is getting more and more expensive. This phenomenon can be explained by price inflation, which means that prices of goods and services go up in a given period. In the European Union, the inflation rate increased from 1.2% in January 2021 to 5.3% in December 2021 (Eurostat, 2022). Especially the prices of food, gas, and housing went up. Housing had to deal with the most significant rent increase in six years, which caused problems for many people, such as falling behind on their rent and increasing debts (CBS, 2020). Mainly students are struck because students cannot earn much money due to their study load. Most students only have a modest side job to finance their studies, life, and student accommodation. Therefore, the rising prices are a severe problem. It is allowed for students to sublet their student rooms if it does not violate the tenancy agreement (Rijksoverheid, 2022). Therefore, students can earn money to rent out their student room during periods their room is not occupied. 
