@@ -54,6 +54,5 @@ final_score<- final_score %>%
   mutate_if(is.numeric, round, digits =3)
 final_score<- final_score %>% arrange(desc(score))
 
-dir.create("../../gen/analysis/output")
 write.csv(final_score, "../../gen/analysis/output/final_score.csv", row.names = TRUE)
 
