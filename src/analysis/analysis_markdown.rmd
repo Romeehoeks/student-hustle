@@ -18,13 +18,14 @@ library(broom)
 library(ggpubr)
 library(knitr)
 library(stargazer)
+library(readr)
 tinytex::install_tinytex()
 ```
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, results='hide'}
-setwd("~/student-hustle/gen/analysis/input")
-combined_mean_data1 <- read.csv(file = 'combined_mean_data1.csv')
-private_room <- read.csv(file = 'private_room.csv')
+setwd("~/student-hustle")
+combined_mean_data1 <- read.csv(file = 'gen/analysis/input/combined_mean_data1.csv')
+private_room <- read.csv(file = 'gen/analysis/input/private_room.csv')
 ```
 
 ## Mean prices
