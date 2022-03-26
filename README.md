@@ -84,9 +84,8 @@ The generated files can be found in the folder 'gen'.
 ## Repository overview
 This project contains the following files and folders:
 
-- makefile > The makefile
 - gen > this file shows the generateed files of our code. It has different subfolders, the subfolder dataprep contains all the data that is needed to generate the files in the analysis map. The files in the analyse map contains all the information needed for our paper. 
-- src > this is called the source file. It contains the different elements of our code. Here you could find the analysis that was made and the data preparations. 
+- src > this is called the source file. This file has different subfolders as well. The dataprep contains the code that is needed to download and clean the data and the analysis data folder contains the code that is needed to make analysis of our paper. 
 ## More resources
 We found some more interesting resources about renting out your student room:
 
