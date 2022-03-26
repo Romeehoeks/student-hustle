@@ -59,6 +59,6 @@ dir.create('../../gen/analysis/input')
 dir.create('../../gen/dataprep/output')
 
 write.csv(private_room, "../../gen/analysis/input/private_room.csv", row.names = FALSE)
-write.csv(private_room, 'private_room.csv')
+write.csv(private_room, "../../src/analysis/private_room.csv", row.names = FALSE)
 
 
