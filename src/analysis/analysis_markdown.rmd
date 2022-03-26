@@ -1,8 +1,11 @@
 ---
-title: "Student Hustle Data Analysis "
-output: pdf_document
+title: 'Student Hustle Data Analysis '
 author: "Dprep Team 3"
 date: '2022-03-21'
+output:
+  html_document:
+    df_print: paged
+  pdf_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -13,80 +16,141 @@ library(ggplot2)
 library(dplyr)
 library(broom)
 library(ggpubr)
+library(knitr)
+library(stargazer)
 tinytex::install_tinytex()
 ```
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, results='hide'}
 setwd("~/student-hustle/gen/analysis/input")
-combined_mean_data1 <- read.csv(file = 'gen/analysis/input/combined_mean_data1.csv')
-private_room <- read.csv(file = 'gen/analysis/input/private_room.csv')
+combined_mean_data1 <- read.csv(file = 'combined_mean_data1.csv')
+private_room <- read.csv(file = 'private_room.csv')
 ```
 
 ## Mean prices
 
-We have calculated the average price per night per city. In the plot it can be shown that the highest price is in Dublin with an average of 68.55 euro' s per night and the lowest price is in Manchester with an average of 32.70 euro's per night.
+First, we compared the prices of a listing, consisting of one room, by calculating the means of the price per listing in the top 10 student cities in Europe. The results showed that in Dublin, on average hosts ask the highest price for their listing with an average of 68.55 euro' s per night, while in Manchester it is on average the cheapest to rent a room with an average of 32.70 euro's per night. In the plot below, the mean prices are visually represented per city.
 
-```{r echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
+```{r echo=FALSE, message=FALSE, warning=FALSE, results='asis', fig.cap="Plot 1: mean prices per city"}
 ggplot(combined_mean_data1, aes(x= city, y=mean_price, color = city)) +
   geom_point() 
 ```
 
 ## Mean reviews
 
-You can also embed plots, for example:
+Second, we compared the mean review scores per city. We found that customers are most satisfied in Edinburgh, and relatively less satisfied in Barcelona. However, the average review score per listing in Barcelona is still 4.72, indicating that customers are generally very satisfied in all the student cities (see Plot 2).
 
-```{r echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
+```{r echo=FALSE, message=FALSE, warning=FALSE, results='asis', fig.cap="Plot 2: mean reviews per city"}
 ggplot(combined_mean_data1, aes(x= city, y=mean_reviews1, color = city)) +geom_point()
 ggsave("mean_reviews.pdf")
 ```
 
 ## Mean availability
 
-You can also embed plots, for example:
+Next, the main availability per year per city were analyzed. In plot 3, it can be seen that in Vienna, one listings are on average most available throughout the year. One listings in Dublin, however, have the lowest availability throughout the year.
 
-```{r echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
+```{r echo=FALSE, message=FALSE, warning=FALSE, results='asis', fig.cap="Plot 3: mean availability per city"}
 ggplot(combined_mean_data1, aes(x= city, y=mean_availability, color = city)) +geom_point()
 ggsave("mean_availability.pdf")
 ```
 
 ## Relationship between price and review score rating
 
-We woulod like to investigate if the review score rating and price have a relationship. Does it mean that if the price increases the review score rating decreases or even increases?
+After checking those plots, it is shown that Manchester and Edinburgh have one of the highest review scores but also the lowest average price per night. Therefore, we conducted two linear regressions to investigate whether the review scores of a listing are significantly influenced by these factors. A linear regression is used, because the results of the linear regressions provide useful insights and explains the relationship between the dependent variable and one or more independent variables. In other words, it is possible to find out whether reviews are influenced price and availability, and what the direction and magnitude of this possible effect might be.
+
+To investigate whether there is a relationship between the price per listing and the review scores per listing, a linear regression was performed. As the p-value (p = 0.305) is higher than 0.05, there is no significant relationship between price and review score per listing. The results can be found in the table below
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, results='hide'}
 reg1 <- lm(review_scores_rating ~ price, data = private_room)
 summary(reg1)
 ```
-However, after investigation we could not say that it has a relationship as the P value was not significant. 
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, results='hide'}
+reg1 <- lm(review_scores_rating ~ availability_365, data = private_room)
+```
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, results='hide'}
+star.1 <- stargazer(reg1,
+                    title="Title: Price Linear Regression Results",
+                    align=TRUE,
+                    type = "text",
+                    style = "all",
+                    dep.var.labels = c("Review Scores")
+                    )
+```
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, results='asis', fig.cap="Table 1: review per score - price"}
+kable(star.1)
+```
+
 ## Relationship between price and availability
 
-You can also embed plots, for example:
+Furthermore, when looking at the availability per listing, we found a significant relationship between availability and review scores. This means that if the availability per listing increases, the review score per listing significantly decreases.
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, results='hide'}
 reg2 <- lm(review_scores_rating ~ availability_365, data = private_room)
-summary(reg2)
+```
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, results='hide'}
+star.2 <- stargazer(reg2,
+                    title="Title: Availability Linear Regression Results",
+                    align=TRUE,
+                    type = "text",
+                    style = "all", 
+                    dep.var.labels = c("Review Scores")
+                    )
+```
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, results='asis', fig.cap="Table 2: review per score - availability"}
+kable(star.2)
 ```
 
 ## Multiple regression with price, availability, short_stay and city
 
-You can also embed plots, for example:
+In order to find out which city is most attractive to rent out your room, several analyses were done. It is expected that reviews are influenced by the variables 'price', 'availability' and 'short stays'. Therefore, these variables are further analyzed.
 
-```{r echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
-regression <- lm(review_scores_rating ~ price + availability_365 + short_stay +city, data=private_room)
-summary(regression)
+A linear regression was performed to examine the relationship between different independent variables 'price', 'availability' and 'short stays' and the dependent variable 'review score'. The output of the linear regression can be found in table below.
 
-#plot of our regression model
-
-plot(allEffects(regression), ylim={c(4.5, 5)})
-
-```
-
-## Regression model
 ```{r echo=FALSE, message=FALSE, warning=FALSE, results='hide'}
-
+regression <- lm(review_scores_rating ~ price + availability_365 + short_stay +city, data=private_room)
 ```
 
-##Top 10 
+```{r echo=FALSE, message=FALSE, warning=FALSE, results='hide'}
+star.3 <- stargazer(regression,
+                    title="Title: Multiple Regression Results",
+                    align=TRUE,
+                    type = "text",
+                    style = "all", 
+                    dep.var.labels = c("Review Scores")
+                    )
+```
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, results='asis', fig.cap="Table 3: Multiple regression"}
+kable(star.3)
+```
+
+The results of the linear regression showed that the variables price and availability have a significant influence on the review of the listing. The regression coefficient of price shows that price has a positive influence on reviews per listing, indicating that if the price increases the review score per listing also significantly increases. This makes sense as generally, the higher the price, the higher the 'quality' of the room. Therefore, if the price for a listing increases, the higher the review score as this generally reflects the quality of the stay.
+
+Regarding availability, the regression coefficient tells us that if the availability per listing increases, the reviews per listing significantly decreases. A reason for this could be that if a room is booked more often because it is more available, its furniture is used more often, which might negatively influence its condition. This might have a negative influence on the review per listing.
+
+Furthermore, the results showed that short stay does not have a significant impact on review scores. Therefore, no conclusions can be made. Additionally, all the student cities significantly influences the review scores. The relations described above are visually represented in the plots in Figure 1.
+
+R-squared worthwhile to mention is that it can be stated that the model poorly explained the variation as the coefficient of determination is close to 0 (Adjusted R2 = .088). This means that the independent variables explain only 8.8% of the variance in review score per listing.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, results='asis', fig.cap="Figure 1: Multiple linear regression" }
+plot(allEffects(regression), ylim={c(4.5, 5)})
+```
+
+## Top 10
+
+To find out which city is most attractive, further analysis and calculations are needed. First the mean price and mean availability are needed, which can be found in the overview below.
+
+```{r, fig.cap="Table 2: Mean data per city"}
+knitr::kable(combined_mean_data1)
+```
+
+Together with the coefficients in Table 1, the reviews per student city can be calculated. This results in the following formula: Intercept + (price \* mean price per city) + (availability \* mean availability per city) + coefficient short stay + coefficient per city The intercept coefficient in Table 1 represents Barcelona. Based on the above mentioned formula, the review score per student city can be calculated. The results per city can be found in Table 3. The table shows that Edinburgh has the highest score. Based on this score, it can be stated that Edinburgh is the most attractive student city to rent out your room.
+
 ```{r echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
 top10<-summary(regression)$coefficients[1,1]+summary(regression)$coefficients[2,1]*combined_mean_data1$mean_price[2:10]+summary(regression)$coefficients[3,1]*combined_mean_data1$mean_availability[2:10]+summary(regression)$coefficients[4,1]+summary(regression)$coefficients[5:13,1] 
 top10 <-as.data.frame(top10)
@@ -99,12 +163,19 @@ top10[nrow(top10) + 1,] = citybarcelona
 #changing the row names
 
 rownames(top10) <- c("berlin", "copenhagen", "dublin", "edinburgh", "london", "manchester", "munich", "paris", "vienna", "barcelona")
+names(top10)[1]<-"score"
 
 #Rounding the final review scores
 top10<- top10 %>%
   mutate_if(is.numeric, round, digits =3)
 
-View(top10)
+top10<- top10 %>% arrange(desc(score))
 ```
 
-##Conclusion
+```{r, fig.cap="Table 3: Top 10 cities"}
+knitr::kable(top10)
+```
+
+## Conclusion
+
+To conclude, based on the data of Airbnb, it can be stated that it is most attractive to rent out your private room on Airbnb in Edinburgh. The second most attractive European city to rent out your private room is Manchester and Munich ended up third.
