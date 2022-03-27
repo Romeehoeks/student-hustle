@@ -48,7 +48,7 @@ ggsave("mean_reviews.pdf")
 
 ## Mean availability
 
-Next, the main availability per year per city were analyzed. In plot 3, it can be seen that in Vienna, one listings are on average most available throughout the year. One listings in Dublin, however, have the lowest availability throughout the year.
+Next, the mean availability per year per city were analyzed. In plot 3, it can be seen that in Vienna, one listings are on average most available throughout the year. One listings in Dublin, however, have the lowest availability throughout the year.
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, results='asis', fig.cap="Plot 3: mean availability per city"}
 ggplot(combined_mean_data1, aes(x= city, y=mean_availability, color = city)) +geom_point()
