@@ -79,7 +79,7 @@ The generated files can be found in the folder 'gen'.
 
 **Repository structure**
 
-![afbeelding](https://user-images.githubusercontent.com/98875680/160235006-d7064f2f-b81a-48b1-8c2f-8df7cb11b9ff.png)
+<img width="54" alt="image" src="https://user-images.githubusercontent.com/98810281/160276848-5e411704-a3d3-40e0-8049-69f944bab04e.png">
 
 
 ## Repository overview
