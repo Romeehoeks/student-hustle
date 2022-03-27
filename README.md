@@ -99,5 +99,5 @@ Two articles about students who were not allowed to rent out their rooms and did
 
 
 ## About 
-This project is conducted by 5 ambitious Marketing Analytics students; Henk-Jan Klijsen (2085005), Marije  Kok (2002073), Max van der Meulen (2086281), Romée Hoeks (2072716) and Thomas Hemrica (2086422) for the course Data preparation. During this project, the learned skills will be put in practice to find out in which European city it is most attractive to rent out your student room. 
+This project is conducted by Team 3, consisting of 5 ambitious Marketing Analytics students; Henk-Jan Klijsen (2085005), Marije  Kok (2002073), Max van der Meulen (2086281), Romée Hoeks (2072716) and Thomas Hemrica (2086422) for the course Data preparation. During this project, the learned skills will be put in practice to find out in which European city it is most attractive to rent out your student room. 
 
