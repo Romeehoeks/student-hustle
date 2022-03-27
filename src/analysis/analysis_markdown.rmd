@@ -132,7 +132,7 @@ kable(star.3)
 
 The results of the linear regression showed that the variables price and availability have a significant influence on the review of the listing. The regression coefficient of price shows that price has a positive influence on reviews per listing, indicating that if the price increases the review score per listing also significantly increases. This makes sense as generally, the higher the price, the higher the 'quality' of the room. Therefore, if the price for a listing increases, the higher the review score as this generally reflects the quality of the stay.
 
-Regarding availability, the regression coefficient tells us that if the availability per listing increases, the reviews per listing significantly decreases. A reason for this could be that if a room is booked more often because it is more available, its furniture is used more often, which might negatively influence its condition. This might have a negative influence on the review per listing.
+Regarding availability, the regression coefficient tells us that if the availability per listing increases, the reviews per listing significantly decreases. A reason for this could be that if a room is booked more often because it is more available, its furniture is used more often, which might negatively influence its condition. This might have a negative influence on the review score per listing.
 
 Furthermore, the results showed that short stay does not have a significant impact on review scores. Therefore, no conclusions can be made. Additionally, all the student cities significantly influences the review scores. The relations described above are visually represented in the plots in Figure 1.
 
