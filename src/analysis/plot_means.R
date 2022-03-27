@@ -6,7 +6,6 @@ library(ggplot2)
 library(dplyr)
 library(broom)
 
-########1
 #read data
 
 dir.create('../../gen/analysis/output')
